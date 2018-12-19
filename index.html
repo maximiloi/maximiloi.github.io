@@ -5,34 +5,46 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Demo site</title>
-  <style>
-    body {
-      font-family: "Helvetica", sans-serif;
-    }
+  <title>Максим Торощин</title>
 
-    h1 {
-      padding-left: 40px;
-    }
-
-    li {
-      list-style: none;
-      margin-bottom: 8px;
-    }
-  </style>
+  <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro" rel="stylesheet">
+  <link href="style.css" rel="stylesheet">
 </head>
 
-<body>
-  <h1>Мои работы</h1>
-  <ul>
-    <li>Первый учебный проект "<a href="sedona/index.html">Седона</a>" <sup>* реализованы индекс страница и гостиницы</sup></li>
-    <li>Второй учебный проект "<a href="cat/index.html">Кэт Энерджи</a>" <sup>* адаптивная верстка всех трех страниц,
-        для телефона, планшета и десктопа.</sup></li>
-  </ul>
-  <ul>
-    <li>Практика "<a href="tort/index.html">Торты на заказ</a>" <sup>* адаптивная верстка страницы,
-        для телефона, планшета и десктопа.</sup></li>
-  </ul>
+<body class="page">
+  <header class="page__header">
+    <div class="page__content">
+      <h1 class="page__content--title">Торощин Максим</h1>
+      <nav class="navigation" aria-label="Страницы сайта">
+        <ul class="navigation__list">
+          <li class="navigation__item"><a href="#" class="link" aria-current="page">Обо мне</a></li>
+          <li class="navigation__item"><a class="link  link_active">Моя верстка</a></li>
+          <!-- <li class="navigation__item"><a href="#" class="link">Инструменты</a></li> -->
+        </ul>
+      </nav>
+    </div>
+    <picture class="page__avatar">
+      <img class="page__avatar--images" src="img/avart.jpg" alt="Моя фотография">
+    </picture>
+  </header>
+  <main class="content">
+    <h1 class="content__title">Мои работы</h1>
+
+    <ul>
+      <li>Первый учебный проект "<a href="site/sedona/index.html">Седона</a>" <sup>* реализованы индекс страница и
+          гостиницы</sup></li>
+      <li>Второй учебный проект "<a href="site/cat/index.html">Кэт Энерджи</a>" <sup>* адаптивная верстка всех трех
+          страниц,
+          для телефона, планшета и десктопа.</sup></li>
+    </ul>
+    <ul>
+      <li>Практика "<a href="site/tort/index.html">Торты на заказ</a>" <sup>* адаптивная верстка страницы,
+          для телефона, планшета и десктопа.</sup></li>
+    </ul>
+  </main>
+  <section class="page__footer">
+
+  </section>
 </body>
 
 </html>
