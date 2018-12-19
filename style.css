@@ -1,6 +1,7 @@
 .page {
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
   height: auto;
   min-width: 650px;
   min-height: 100vh;
@@ -19,7 +20,7 @@
 .page__header {
   display: flex;
   justify-content: right;
-
+  height: 15em;
 }
 
 .page__content--title {
@@ -71,9 +72,23 @@ a:hover {
   color: #101010;
 }
 
+.content {
+  align-items: flex-start;
+  min-height: 25em;
+}
+
 .content__title {
   margin: 0;
   padding: 0;
   font-size: 1.5em;
   padding-left: 2em;
+}
+
+.contacts {
+  display: flex;
+}
+
+.contacts__item {
+  list-style: none;
+  margin-right: 1rem;
 }
