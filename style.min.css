@@ -1,0 +1,114 @@
+.page,
+.page__header {
+  display: -webkit-box;
+  display: -ms-flexbox
+}
+
+.page {
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  height: auto;
+  min-width: 650px;
+  min-height: 100vh;
+  margin: 0;
+  padding: 0 2em;
+  font-family: "Source Sans Pro", Helvetica, sans-serif;
+  color: #0b0b0b;
+  font-size: 20px;
+  line-height: 1.5;
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(7.5em, #1a3c55), color-stop(7.5em, #0f2e3b));
+  background-image: -webkit-linear-gradient(top, #1a3c55 7.5em, #0f2e3b 7.5em);
+  background-image: -o-linear-gradient(top, #1a3c55 7.5em, #0f2e3b 7.5em);
+  background-image: linear-gradient(to bottom, #1a3c55 7.5em, #0f2e3b 7.5em)
+}
+
+.page__header {
+  display: flex;
+  -webkit-box-pack: right;
+  -ms-flex-pack: right;
+  justify-content: right;
+  height: 15em
+}
+
+.navigation__list,
+.page__avatar {
+  display: -webkit-box;
+  display: -ms-flexbox
+}
+
+.page__content--title {
+  margin: 1.5em 0 0;
+  padding: 0;
+  font-size: 2em
+}
+
+.page__avatar {
+  display: flex
+}
+
+.page__avatar--images {
+  margin: 2.5em;
+  width: 10em;
+  height: 10em;
+  border-radius: 50%
+}
+
+.navigation__list {
+  display: flex;
+  margin: 0;
+  padding: 0
+}
+
+.navigation__item {
+  list-style: none;
+  margin-right: 1rem
+}
+
+.link,
+a {
+  color: #666;
+  text-decoration: none
+}
+
+.link:active,
+.link:focus,
+.link:hover,
+.link_active,
+a:active,
+a:focus,
+a:hover {
+  text-decoration: none;
+  background-color: #0f2e3b;
+  outline: #0f2e3b solid .4em;
+  color: #666
+}
+
+.content {
+  -webkit-box-align: start;
+  -ms-flex-align: start;
+  align-items: flex-start;
+  min-height: 25em
+}
+
+.content__title {
+  margin: 0;
+  padding: 0 0 0 2em;
+  font-size: 1.5em
+}
+
+.contacts {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex
+}
+
+.contacts__item {
+  list-style: none;
+  margin-right: 1rem
+}
