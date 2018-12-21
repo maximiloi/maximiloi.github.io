@@ -1,19 +1,20 @@
-.page,
-.page__header {
-  display: -webkit-box;
-  display: -ms-flexbox
+.contacts__item,
+li {
+  list-style: none
+}
+
+ul {
+  padding: 0
 }
 
 .page {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
   -ms-flex-direction: column;
   flex-direction: column;
-  -webkit-box-pack: justify;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
-  height: auto;
   min-width: 650px;
   min-height: 100vh;
   margin: 0;
@@ -22,24 +23,22 @@
   color: #0b0b0b;
   font-size: 20px;
   line-height: 1.5;
-  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(7.5em, #1a3c55), color-stop(7.5em, #0f2e3b));
-  background-image: -webkit-linear-gradient(top, #1a3c55 7.5em, #0f2e3b 7.5em);
-  background-image: -o-linear-gradient(top, #1a3c55 7.5em, #0f2e3b 7.5em);
-  background-image: linear-gradient(to bottom, #1a3c55 7.5em, #0f2e3b 7.5em)
+  background-image: -webkit-linear-gradient(top, #1a3c55 150px, #0f2e3b 150px);
+  background-image: -o-linear-gradient(top, #1a3c55 150px, #0f2e3b 150px);
+  background-image: linear-gradient(to bottom, #1a3c55 150px, #0f2e3b 150px)
+}
+
+.navigation__list,
+.page__header {
+  display: -webkit-box;
+  display: -ms-flexbox
 }
 
 .page__header {
   display: flex;
-  -webkit-box-pack: right;
-  -ms-flex-pack: right;
-  justify-content: right;
-  height: 15em
-}
-
-.navigation__list,
-.page__avatar {
-  display: -webkit-box;
-  display: -ms-flexbox
+  -webkit-box-pack: end;
+  -ms-flex-pack: end;
+  justify-content: flex-end
 }
 
 .page__content--title {
@@ -48,12 +47,8 @@
   font-size: 2em
 }
 
-.page__avatar {
-  display: flex
-}
-
 .page__avatar--images {
-  margin: 2.5em;
+  margin: 2.5em 2.5em 0;
   width: 10em;
   height: 10em;
   border-radius: 50%
@@ -90,10 +85,10 @@ a:hover {
 }
 
 .content {
-  -webkit-box-align: start;
-  -ms-flex-align: start;
-  align-items: flex-start;
-  min-height: 25em
+  margin-top: -4em;
+  -webkit-box-flex: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1
 }
 
 .content__title {
@@ -105,10 +100,15 @@ a:hover {
 .contacts {
   display: -webkit-box;
   display: -ms-flexbox;
-  display: flex
+  display: flex;
+  margin: 0;
+  padding: 0
 }
 
 .contacts__item {
-  list-style: none;
   margin-right: 1rem
+}
+
+.footer__text {
+  margin: 0
 }

@@ -1,8 +1,14 @@
+ul {
+  padding: 0;
+}
+
+li {
+  list-style: none;
+}
+
 .page {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
-  height: auto;
   min-width: 650px;
   min-height: 100vh;
   margin: 0;
@@ -69,7 +75,8 @@ a:hover {
 }
 
 .content {
-  
+  margin-top: -4em;
+  flex-grow: 1;
 }
 
 .content__title {
@@ -81,9 +88,15 @@ a:hover {
 
 .contacts {
   display: flex;
+  margin: 0;
+  padding: 0;
 }
 
 .contacts__item {
   list-style: none;
   margin-right: 1rem;
+}
+
+.footer__text {
+  margin: 0;
 }
