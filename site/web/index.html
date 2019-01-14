@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="ru" class="no-js">
 
 <head>
   <meta charset="UTF-8">
@@ -19,20 +19,21 @@
 
   <header class="page-header">
     <div class="page-header__wrapper-top">
-      <div class="hamburger hamburger--elastic">
-        <div class="hamburger-box">
-          <div class="hamburger-inner">
-            <nav class="page-nav">
-              <ul class="page-nav__list">
-                <li class="page-nav__item">О нас</li>
-                <li class="page-nav__item">Услуги</li>
-                <li class="page-nav__item">Преимущества</li>
-                <li class="page-nav__item">Заказать</li>
-              </ul>
-            </nav>
+
+      <nav class="page-nav">
+        <div class="hamburger  hamburger--elastic  hamburger--closed  hamburger--nojs" tabindex="0" aria-label="Menu" role="button" aria-controls="navigation" aria-expanded="true/false">
+          <div class="hamburger-box">
+            <div class="hamburger-inner"></div>
           </div>
         </div>
-      </div>
+        <ul class="page-nav__list  page-nav__open page-nav--opened  page-nav--nojs">
+          <li class="page-nav__item">О нас</li>
+          <li class="page-nav__item">Услуги</li>
+          <li class="page-nav__item">Преимущества</li>
+          <li class="page-nav__item">Заказать</li>
+        </ul>
+      </nav>
+
       <div class="page-header__logo">
         <span class="page-header__logo-white">A</span>
         <span class="page-header__logo-blue">K</span>
@@ -179,8 +180,7 @@
                 <input id="form__name" type="text" name="form__name" value="" placeholder="Введите имя ..." required="">
               </li>
               <li class="form__item">
-                <input id="form__email" type="email" name="form__email" value="" placeholder="Введите email ..."
-                  required="">
+                <input id="form__email" type="email" name="form__email" value="" placeholder="Введите email ..." required="">
               </li>
               <li class="form__item">
                 <textarea class="form__message" name="form__message" placeholder="Ваш вопрос" required=""></textarea>
@@ -216,8 +216,9 @@
             <img class="reviews__photo" src="http://placekitten.com/250/201" alt="">
             <div class="reviews__content reviews__content-active">
               <div class="reviews__name">Тимофей Иванов</div>
-              <div class="reviews__text"> Сделал заказ у этих ребят сайт просто загледенье. Работает просто на ура,
-                у нас везде теперь в поисковиках первое место. Так эти ребята ещё и молока налили с печеньками, про вынос какашек вообще говорить не приходиться.
+              <div class="reviews__text">Сделал заказ у этих ребят сайт просто загледенье. Работает просто на ура,
+                у нас везде теперь в поисковиках первое место. Так эти ребята ещё и молока налили с печеньками, про
+                вынос какашек вообще говорить не приходиться.
               </div>
             </div>
           </div>
@@ -277,6 +278,8 @@
       <div class="page-footer__phone">8 800 555 53 53</div>
     </div>
   </footer>
+
+  <script src="js/script.js"></script>
 
 </body>
 
