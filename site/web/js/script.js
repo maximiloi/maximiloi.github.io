@@ -1,3 +1,5 @@
+"use strict";
+
 var navPage = document.querySelector(".page-nav__list");
 var hamburgerToggle = document.querySelector(".hamburger");
 var logoMargin = document.querySelector(".page-header__logo");
@@ -21,5 +23,26 @@ hamburgerToggle.addEventListener("click", function () {
     navPage.classList.remove("page-nav--opened");
     hamburgerToggle.classList.remove("is-active");
     logoMargin.classList.remove("page-header__logo--margin-menu");
+  }
+});
+
+var tabsWrap = document.querySelector(".services__list");
+
+tabsWrap.addEventListener("click", function (event) {
+  if (event.target.className == "services__item") {
+    var dataTab = event.target.getAttribute("data-tab");
+    var tabs = document.getElementsByClassName("services__item");
+    for (var i = 0; i < tabs.length; i++) {
+      tabs[i].classList.remove("active");
+    }
+    event.target.classList.add("active");
+
+    var content = document.getElementsByClassName("services__content");
+    for (var i = 0; i < content.length; i++) {
+      if (dataTab == i) {
+        content[i].classList.add("active");
+      } else {
+      content[i].classList.remove("active");
+    }}
   }
 });
