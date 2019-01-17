@@ -46,3 +46,28 @@ tabsWrap.addEventListener("click", function (event) {
     }}
   }
 });
+
+var tabsWrap = document.querySelector(".portfolio__list");
+
+tabsWrap.addEventListener("click", function (event) {
+  if (event.target.className == "portfolio__item") {
+    var dataTab = event.target.getAttribute("data-tab");
+    var tabs = document.getElementsByClassName("portfolio__item");
+    for (var i = 0; i < tabs.length; i++) {
+      tabs[i].classList.remove("active");
+    }
+    event.target.classList.add("active");
+
+    var content = document.getElementsByClassName("portfolio__contents");
+    for (var i = 0; i < content.length; i++) {
+      if (dataTab == i) {
+        content[i].classList.remove("none");
+        content[i].classList.add("active");
+      } else {
+        content[i].classList.remove("active");
+        content[i].classList.add("none");
+      }
+    }
+  }
+});
+
