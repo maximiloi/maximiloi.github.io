@@ -1,5 +1,5 @@
 "use strict";
-
+// включение выключение бургера
 var navPage = document.querySelector(".page-nav__list");
 var hamburgerToggle = document.querySelector(".hamburger");
 var logoMargin = document.querySelector(".page-header__logo");
@@ -26,6 +26,17 @@ hamburgerToggle.addEventListener("click", function () {
   }
 });
 
+// анимация блоков хедера
+var fadeOutLeft = document.querySelector(".page-header__title");
+fadeOutLeft.classList.add("fadeOutLeft");
+
+var slideInUp1 = document.querySelector(".page-header__text");
+slideInUp1.classList.add("slideInUp1");
+
+var slideInUp2 = document.querySelector(".page-header__button");
+slideInUp2.classList.add("slideInUp2");
+
+// табы блока НАШИ УСЛУГИ
 var tabsWrap = document.querySelector(".services__list");
 
 tabsWrap.addEventListener("click", function (event) {
@@ -47,6 +58,7 @@ tabsWrap.addEventListener("click", function (event) {
   }
 });
 
+// табы блока ПОРТФОЛИО
 var tabsWrap = document.querySelector(".portfolio__list");
 
 tabsWrap.addEventListener("click", function (event) {
@@ -71,3 +83,4 @@ tabsWrap.addEventListener("click", function (event) {
   }
 });
 
+// слайдер ОТЗЫВОВ
