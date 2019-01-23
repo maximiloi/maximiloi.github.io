@@ -6,6 +6,13 @@ li {
   list-style: none;
 }
 
+i {
+  margin: 15px 0;
+  font-size: 2em;
+  color: white;
+  opacity: .6;
+}
+
 .page {
   background-color: darkslategray;
   min-height: 100vh;
@@ -14,9 +21,8 @@ li {
 .page__avatar--images {
   margin: 2.5em;
   margin-bottom: 0;
-  width: 15em;
-  height: 15em;
-  border-radius: 50%;
+  width: 8em;
+  height: 8em;
 }
 
 .navigation__item {
@@ -37,6 +43,7 @@ li {
 }
 
 .content__img {
+  display: block;
   width: 290px;
 }
 
