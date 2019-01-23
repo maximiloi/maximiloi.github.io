@@ -1,55 +1,59 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="ru">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Максим Торощин</title>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-  <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro" rel="stylesheet">
-  <link href="normalize.min.css" rel="stylesheet">
-  <link href="style.min.css" rel="stylesheet">
+  <!-- Bootstrap CSS -->
+  <link href="css/bootstrap-grid.min.css" rel="stylesheet">
+  <link href="css/bootstrap.min.css" rel="stylesheet">
+  <link href="style.css" rel="stylesheet">
+
+  <title>Торощин Максим</title>
 </head>
 
-<body class="page">
-  <header class="page__header">
-    <div class="page__content">
+<body class="page  container  d-flex  flex-column">
+  <header class="page__header d-flex  flex-column-reverse  align-items-center  flex-md-row  align-items-md-end  justify-content-end">
+    <div class="page__content d-flex flex-column justify-content-end">
       <h1 class="page__content--title">Торощин Максим</h1>
       <nav class="navigation" aria-label="Страницы сайта">
-        <ul class="navigation__list">
-          <!-- <li class="navigation__item"><a href="#" class="link" aria-current="page">Обо мне</a></li> -->
-          <li class="navigation__item"><a class="link  link_active">Моя верстка</a></li>
-          <!-- <li class="navigation__item"><a href="#" class="link">Инструменты</a></li> -->
-        </ul>
+        <div class="navigation__list d-flex">
+          <!-- <div class="navigation__item"><a href="#" class="link" aria-current="page">Обо мне</a></div> -->
+          <div class="navigation__item"><a class="link  link_active">Моя верстка</a></div>
+          <!-- <div class="navigation__item"><a href="#" class="link">Инструменты</a></div> -->
+        </div>
       </nav>
     </div>
     <picture class="page__avatar">
       <img class="page__avatar--images" src="img/avart.jpg" alt="Моя фотография">
     </picture>
   </header>
-  <main class="content">
-    <h1 class="content__title">Мои работы</h1>
-    <ul class="content__list">
-      <li class="content_items">
+  <main class="content flex-grow-1">
+    <h1 class="content__title invisible">Мои работы</h1>
+    <ul class="content__list d-flex align-content-stretch flex-wrap">
+      <li class="content_items flex-fill">
         <a href="site/sedona/index.html"><img class="content__img " src="img/sedona-mock.png" alt=""></a>
-        <p class="content__text">Проект "<a href="site/sedona/index.html">Седона</a>" <span>реализованы индекс страница
+        <p class="content__text">Учебный проект "<a href="site/sedona/index.html">Седона</a>" <span>реализованы индекс
+            страница
             и гостиницы</span></p>
       </li>
-      <li class="content_items">
+      <li class="content_items flex-fill">
         <a href="site/cat/index.html"><img class="content__img" src="img/cat-mock.png" alt=""></a>
-        <p class="content__text">Проект "<a href="site/cat/index.html">Кэт Энерджи</a>" <span>адаптивная верстка всех
-            трех страниц, для телефона, планшета и десктопа.</span></p>
+        <p class="content__text">Учебный проект "<a href="site/cat/index.html">Кэт Энерджи</a>" <span>адаптивная
+            верстка всех трех страниц, для телефона, планшета и десктопа.</span></p>
       </li>
-      <li class="content_items">
+      <li class="content_items flex-fill">
         <a href="site/tort/index.html"><img class="content__img" src="img/tort-mock.png" alt=""></a>
-        <span class="content__text">Проект "<a href="site/tort/index.html">Торты на заказ</a>" <span>адаптивная верстка
-            страницы, для телефона, планшета и десктопа.</span>
+        <p class="content__text">Проект "<a href="site/tort/index.html">Торты на заказ</a>" <span>адаптивная верстка
+            лендинга, для телефона, планшета и десктопа.</span>
         </p>
       </li>
-      <li class="content_items">
+      <li class="content_items flex-fill">
         <a href="site/web/index.html"><img class="content__img" src="img/web-mock.png" alt=""></a>
-        <p class="content__text">Проект "<a href="site/web/index.html">Портфолио Вебстудии</a>" <span>верстка лендинга для десктопа.</span>
+        <p class="content__text">Проект "<a href="site/web/index.html">Портфолио Вебстудии</a>" <span>верстка лендинга
+            для десктопа.</span>
         </p>
       </li>
     </ul>
@@ -58,7 +62,7 @@
     <div class="page__footer">
       <footer class="footer">
         <div class="footer__contacts">
-          <ul class="contacts">
+          <ul class="contacts d-flex flex-wrap">
             <li class="contacts__item"><a href="mailto:maximiloi@gmail.com">Почта</a></li>
             <li class="contacts__item"><a href="https://t.me/maximiloi">Телеграм</a></li>
             <li class="contacts__item"><a href="https://vk.com/maximiloi">ВК</a></li>
@@ -71,7 +75,6 @@
         <p class="footer__text">© 2018</p>
       </footer>
     </div>
-
   </section>
 </body>
 
