@@ -337,24 +337,26 @@
 
     <section class="reviews">
       <h2 class="reviews__title">Отзывы наших клиентов</h2>
+
       <div class="reviews__wrapper">
-        <div class="reviews__wrapper-text">
-          <div class="reviews__wrapper-img">
+
+        <div class="reviews__wrapper-text  slides">
+
+          <div class="reviews__wrapper-img  slide  prev">
             <div class="reviews__photo">
               <img src="http://placekitten.com/250/200" alt="">
               <div class="reviews__photo-filter"></div>
             </div>
             <div class="reviews__content none">
               <div class="reviews__name">Тимофей Иванов</div>
-              <div class="reviews__text">Lorem, ipsum dolor sit amet consectetur adipisicing elit. In adipisci
-                deserunt
+              <div class="reviews__text">Lorem, ipsum dolor sit amet consectetur adipisicing elit. In adipisci deserunt
                 facilis id blanditiis, impedit praesentium illum expedita quo nemo. Minus doloribus, libero expedita
-                est,
-                provident autem aliquid optio deserunt possimus, qui esse animi dolor quod non error! Quisquam, veniam!
+                est, provident autem aliquid optio deserunt possimus, qui esse animi dolor quod non error! Quisquam,
+                veniam!
               </div>
             </div>
           </div>
-          <div class="reviews__wrapper-img reviews__wrapper-img--active">
+          <div class="reviews__wrapper-img  slide  on">
             <img class="reviews__photo" src="http://placekitten.com/250/201" alt="">
             <div class="reviews__content reviews__content-active">
               <div class="reviews__name">Тимофей Иванов</div>
@@ -364,42 +366,41 @@
               </div>
             </div>
           </div>
-          <div class="reviews__wrapper-img">
+          <div class="reviews__wrapper-img  slide  next">
             <div class="reviews__photo">
               <img src="http://placekitten.com/250/202" alt="">
               <div class="reviews__photo-filter"></div>
             </div>
             <div class="reviews__content none">
               <div class="reviews__name">Тимофей Иванов</div>
-              <div class="reviews__text">Lorem, ipsum dolor sit amet consectetur adipisicing elit. In adipisci
-                deserunt
+              <div class="reviews__text">Lorem, ipsum dolor sit amet consectetur adipisicing elit. In adipisci deserunt
                 facilis id blanditiis, impedit praesentium illum expedita quo nemo. Minus doloribus, libero expedita
-                est,
-                provident autem aliquid optio deserunt possimus, qui esse animi dolor quod non error! Quisquam, veniam!
+                est, provident autem aliquid optio deserunt possimus, qui esse animi dolor quod non error! Quisquam,
+                veniam!
               </div>
             </div>
           </div>
-          <div class="reviews__wrapper-img none">
+          <div class="reviews__wrapper-img  slide  none">
             <img class="reviews__photo" src="http://placekitten.com/250/203" alt="">
             <div class="reviews__content none">
               <div class="reviews__name">Тимофей Иванов</div>
               <div class="reviews__text ">Lorem, ipsum dolor sit amet consectetur adipisicing elit. In adipisci
                 deserunt
                 facilis id blanditiis, impedit praesentium illum expedita quo nemo. Minus doloribus, libero expedita
-                est,
-                provident autem aliquid optio deserunt possimus, qui esse animi dolor quod non error! Quisquam, veniam!
+                est, provident autem aliquid optio deserunt possimus, qui esse animi dolor quod non error! Quisquam,
+                veniam!
               </div>
             </div>
           </div>
         </div>
 
         <div class="reviews__wrapper-note">
-          <ul class="reviews__wrapper-list">
-            <li class="reviews__wrapper-item active"></li>
-            <li class="reviews__wrapper-item"></li>
-            <li class="reviews__wrapper-item"></li>
-            <li class="reviews__wrapper-item"></li>
-          </ul>
+          <div class="reviews__wrapper-list  dot__list">
+            <div class="reviews__wrapper-item  dot__item" data-tab="0"></div>
+            <div class="reviews__wrapper-item  dot__item  active" data-tab="1"></div>
+            <div class="reviews__wrapper-item  dot__item" data-tab="2"></div>
+            <div class="reviews__wrapper-item  dot__item" data-tab="3"></div>
+          </div>
         </div>
       </div>
     </section>
@@ -421,7 +422,7 @@
     </div>
   </footer>
 
-  <script src="js/script.min.js"></script>
+  <script src="js/script.js"></script>
 
 </body>
 

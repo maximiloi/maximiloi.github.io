@@ -53,8 +53,9 @@ tabsWrap.addEventListener("click", function (event) {
       if (dataTab == i) {
         content[i].classList.add("active");
       } else {
-      content[i].classList.remove("active");
-    }}
+        content[i].classList.remove("active");
+      }
+    }
   }
 });
 
