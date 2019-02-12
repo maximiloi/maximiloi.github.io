@@ -302,8 +302,8 @@ a {
 
 .slider__item {
   position: relative;
-  margin-right: 15px;
-  margin-left: 15px;
+  margin-right: 5px;
+  margin-left: 5px;
 }
 
 .slider__description {

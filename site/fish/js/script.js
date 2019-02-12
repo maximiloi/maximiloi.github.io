@@ -7,7 +7,7 @@ $(document).ready(function () {
     items: 4,
     autoplay: true,
     autoplayTimeout: 3000,
-    autoplayHoverPause: false,
+    autoplayHoverPause: true,
   });
   owl.owlCarousel();
   $('.next').click(function () {
