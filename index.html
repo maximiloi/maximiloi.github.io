@@ -2,6 +2,20 @@
 <html lang="ru">
 
 <head>
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-134339247-1"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+
+  function gtag() {
+    dataLayer.push(arguments);
+  }
+  gtag('js', new Date());
+
+  gtag('config', 'UA-134339247-1');
+</script>
+
+
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
@@ -11,6 +25,7 @@
   <link href="css/bootstrap-grid.min.css" rel="stylesheet">
   <link href="css/bootstrap.min.css" rel="stylesheet">
   <link href="style.css" rel="stylesheet">
+  <link href="tabs.css" rel="stylesheet">
 
   <title>Торощин Максим</title>
 </head>
@@ -19,87 +34,110 @@
   <header class="page__header d-flex  flex-column-reverse  align-items-center  flex-md-row  align-items-md-end  justify-content-end">
     <div class="page__content d-flex flex-column justify-content-end">
       <h1 class="page__content--title">Торощин Максим</h1>
-      <nav class="navigation" aria-label="Страницы сайта">
-        <div class="navigation__list d-flex">
-          <!-- <div class="navigation__item"><a href="#" class="link" aria-current="page">Обо мне</a></div> -->
-          <div class="navigation__item"><a class="link  link_active">Моя верстка</a></div>
-          <!-- <div class="navigation__item"><a href="#" class="link">Инструменты</a></div> -->
-        </div>
-      </nav>
     </div>
     <picture class="page__avatar">
       <img class="page__avatar--images rounded-circle" src="img/avart.jpg" alt="Моя фотография">
     </picture>
   </header>
-  <main class="content flex-grow-1">
-    <h1 class="content__title invisible">Мои работы</h1>
-    <ul class="content__list d-flex  flex-wrap">
-      <li class="content_items flex-fill">
-        <a href="site/sedona/index.html"><img class="content__img " src="img/sedona-mock.png" alt=""></a>
-        <i class="fas fa-desktop"></i>
-        <i class="fab fa-html5"></i>
-        <i class="fab fa-css3-alt"></i>
-        <i class="fab fa-js"></i>
-        <i class="fab fa-internet-explorer"></i>
-        <p class="content__text">Учебный проект "<a href="site/sedona/index.html">Седона</a>" <span>реализованы индекс
-            страница
-            и гостиницы</span></p>
-      </li>
-      <li class="content_items flex-fill">
-        <a href="site/cat/index.html"><img class="content__img" src="img/cat-mock.png" alt=""></a>
-        <i class="fas fa-mobile-alt"></i>
-        <i class="fas fa-tablet-alt"></i>
-        <i class="fas fa-desktop"></i>
-        <i class="fab fa-html5"></i>
-        <i class="fab fa-css3-alt"></i>
-        <i class="fab fa-js"></i>
-        <i class="fab fa-npm"></i>
-        <i class="fab fa-less"></i>
-        <i class="fab fa-gulp"></i>
-        <p class="content__text">Учебный проект "<a href="site/cat/index.html">Кэт Энерджи</a>" <span>адаптивная
-            верстка всех трех страниц, для телефона, планшета и десктопа.</span></p>
-      </li>
-      <li class="content_items flex-fill">
-        <a href="site/tort/index.html"><img class="content__img" src="img/tort-mock.png" alt=""></a>
-        <i class="fas fa-mobile-alt"></i>
-        <i class="fas fa-tablet-alt"></i>
-        <i class="fas fa-desktop"></i>
-        <i class="fab fa-html5"></i>
-        <i class="fab fa-css3-alt"></i>
-        <i class="fab fa-js"></i>
-        <i class="fab fa-npm"></i>
-        <i class="fab fa-less"></i>
-        <i class="fab fa-gulp"></i>
-        <p class="content__text">Проект "<a href="site/tort/index.html">Торты на заказ</a>" <span>адаптивная верстка
-            лендинга, для телефона, планшета и десктопа.</span>
-        </p>
-      </li>
-      <li class="content_items flex-fill">
-        <a href="site/web/index.html"><img class="content__img" src="img/web-mock.png" alt=""></a>
-        <i class="fas fa-desktop"></i>
-        <i class="fab fa-html5"></i>
-        <i class="fab fa-css3-alt"></i>
-        <i class="fab fa-js"></i>
-        <i class="fab fa-npm"></i>
-        <i class="fab fa-less"></i>
-        <i class="fab fa-gulp"></i>
-        <p class="content__text">Проект "<a href="site/web/index.html">Портфолио Вебстудии</a>" <span>верстка лендинга
-            для десктопа, с анимацией блоков в шапке сайта.</span>
-        </p>
-      </li>
-      <li class="content_items flex-fill">
-        <a href="site/fish/index.html"><img class="content__img" src="img/ryby-mock.png" alt=""></a>
-        <i class="fas fa-desktop"></i>
-        <i class="fab fa-html5"></i>
-        <i class="fab fa-css3-alt"></i>
-        <i class="fab fa-js"></i>
-        <i class="fab fa-font-awesome"></i>
-        <p class="content__text">Проект "<a href="site/fish/index.html">Интернет-магазина по продаже свежей рыбы</a>" <span>верстка лендинга
-            для десктопа, с настройкой jQuery плагина Owl Carusel 2.</span>
-        </p>
-      </li>
+  <main class="content flex-grow-1 tabs">
+    <input type="radio" name="tabs" id="tab3">
+    <label for="tab3"><span>Инструменты</span></label>
 
-    </ul>
+    <input type="radio" name="tabs" id="tab2" checked>
+    <label for="tab2"><span>Моя верстка</span></label>
+
+    <input type="radio" name="tabs" id="tab1">
+    <label for="tab1"><span>Обо мне</span></label>
+
+
+    <section id="tab-content1" class="about-me tab-content">
+      <h2 class="about-me__title invisible">Обо мне</h2>
+      <p class="about-me__text">Родился в Сибири на берегу Ангары.
+        Закончил НОВгу, по специальности ... <span>(впрочем не отработал и дня, как позже выяснилось у меня аллергия)</span>
+        С головой ушел в торговлю <span>(добился, как мне кажется, успехов)</span> Учился в Хтмл Академии. Сейчас хочу
+        добится успехов в
+        веб разработке.</p>
+      <p class="about-me__text">Но, а пока ищу работу.</p>
+    </section>
+
+    <section id="tab-content2" class="work tab-content">
+      <h2 class="content__title invisible">Мои работы</h2>
+      <ul class="content__list d-flex  flex-wrap">
+        <li class="content_items flex-fill">
+          <a href="site/sedona/index.html"><img class="content__img " src="img/sedona-mock.png" alt=""></a>
+          <i class="fas fa-desktop"></i>
+          <i class="fab fa-html5"></i>
+          <i class="fab fa-css3-alt"></i>
+          <i class="fab fa-js"></i>
+          <i class="fab fa-internet-explorer"></i>
+          <p class="content__text">Учебный проект "<a href="site/sedona/index.html">Седона</a>" <span>реализованы
+              индекс
+              страница
+              и гостиницы</span></p>
+        </li>
+        <li class="content_items flex-fill">
+          <a href="site/cat/index.html"><img class="content__img" src="img/cat-mock.png" alt=""></a>
+          <i class="fas fa-mobile-alt"></i>
+          <i class="fas fa-tablet-alt"></i>
+          <i class="fas fa-desktop"></i>
+          <i class="fab fa-html5"></i>
+          <i class="fab fa-css3-alt"></i>
+          <i class="fab fa-js"></i>
+          <i class="fab fa-npm"></i>
+          <i class="fab fa-less"></i>
+          <i class="fab fa-gulp"></i>
+          <p class="content__text">Учебный проект "<a href="site/cat/index.html">Кэт Энерджи</a>" <span>адаптивная
+              верстка всех трех страниц, для телефона, планшета и десктопа.</span></p>
+        </li>
+        <li class="content_items flex-fill">
+          <a href="site/tort/index.html"><img class="content__img" src="img/tort-mock.png" alt=""></a>
+          <i class="fas fa-mobile-alt"></i>
+          <i class="fas fa-tablet-alt"></i>
+          <i class="fas fa-desktop"></i>
+          <i class="fab fa-html5"></i>
+          <i class="fab fa-css3-alt"></i>
+          <i class="fab fa-js"></i>
+          <i class="fab fa-npm"></i>
+          <i class="fab fa-less"></i>
+          <i class="fab fa-gulp"></i>
+          <p class="content__text">Проект "<a href="site/tort/index.html">Торты на заказ</a>" <span>адаптивная верстка
+              лендинга, для телефона, планшета и десктопа.</span>
+          </p>
+        </li>
+        <li class="content_items flex-fill">
+          <a href="site/web/index.html"><img class="content__img" src="img/web-mock.png" alt=""></a>
+          <i class="fas fa-desktop"></i>
+          <i class="fab fa-html5"></i>
+          <i class="fab fa-css3-alt"></i>
+          <i class="fab fa-js"></i>
+          <i class="fab fa-npm"></i>
+          <i class="fab fa-less"></i>
+          <i class="fab fa-gulp"></i>
+          <p class="content__text">Проект "<a href="site/web/index.html">Портфолио Вебстудии</a>" <span>верстка
+              лендинга
+              для десктопа, с анимацией блоков в шапке сайта.</span>
+          </p>
+        </li>
+        <li class="content_items flex-fill">
+          <a href="site/fish/index.html"><img class="content__img" src="img/ryby-mock.png" alt=""></a>
+          <i class="fas fa-desktop"></i>
+          <i class="fab fa-html5"></i>
+          <i class="fab fa-css3-alt"></i>
+          <i class="fab fa-js"></i>
+          <i class="fab fa-font-awesome"></i>
+          <p class="content__text">Проект "<a href="site/fish/index.html">Интернет-магазина по продаже свежей рыбы</a>"
+            <span>верстка лендинга
+              для десктопа, с настройкой jQuery плагина Owl Carusel 2.</span>
+          </p>
+        </li>
+      </ul>
+    </section>
+
+    <section id="tab-content3" class="tool tab-content">
+      <h2 class="tool__title invisible">Инструменты</h2>
+      <p class="tool__text">Пока я сижу и вспоминаю чего использую.</p>
+    </section>
+
   </main>
   <section class="page__footer">
     <div class="page__footer">

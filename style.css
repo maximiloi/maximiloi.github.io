@@ -25,8 +25,25 @@ i {
   height: 8em;
 }
 
-.navigation__item {
-  margin-right: 0.8em;
+.about-me__text {
+  font-size: 3em;
+  line-height: 1;
+}
+
+.about-me__text i {
+  font-size: 0.8em;
+}
+
+.about-me__text span {
+  font-size: 0.3em;
+}
+
+.fa-baby {
+  color: transparent;
+}
+
+.fa-school {
+  font-size: 0.6em;
 }
 
 .content__list {
