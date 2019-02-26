@@ -9,12 +9,12 @@ li {
 i {
   margin: 15px 0;
   font-size: 1.3em;
-  color: white;
+  color: grey;
   opacity: .6;
 }
 
 .page {
-  background-color: darkslategray;
+  background-color: rgb(255, 255, 255);
   min-height: 100vh;
 }
 
