@@ -1,0 +1,650 @@
+@font-face {
+  font-weight: normal;
+  font-style: normal;
+  font-family: "FivoSansRegular";
+  src: url("../fonts/FivoSans-Regular.woff2") format("woff2"), url("../fonts/FivoSans-Regular.woff") format("woff");
+}
+
+@font-face {
+  font-weight: normal;
+  font-style: normal;
+  font-family: "FivoSansLight";
+  src: url("../fonts/FivoSans-Light.woff2") format("woff2"), url("../fonts/FivoSans-Light.woff") format("woff");
+}
+
+@font-face {
+  font-weight: normal;
+  font-style: normal;
+  font-family: "FivoSansBold";
+  src: url("../fonts/FivoSans-Bold.woff2") format("woff2"), url("../fonts/FivoSans-Bold.woff") format("woff");
+}
+
+@font-face {
+  font-weight: normal;
+  font-style: normal;
+  font-family: "FivoSansHeavy";
+  src: url("../fonts/FivoSans-Heavy.woff2") format("woff2"), url("../fonts/FivoSans-Heavy.woff") format("woff");
+}
+
+@font-face {
+  font-weight: normal;
+  font-style: normal;
+  font-family: "FivoSansOblique";
+  src: url("../fonts/FivoSans-Oblique.woff2") format("woff2"), url("../fonts/FivoSans-Oblique.woff") format("woff");
+}
+
+body {
+  font-family: "FivoSansLight", sans-serif;
+  background-color: #ffffff;
+  color: #000000;
+  font-size: 18px;
+  line-height: 40px;
+}
+
+.header {
+  background: url("../image/bg_header.png");
+  background-position-x: 50%;
+  background-repeat: no-repeat;
+  height: 1325px;
+}
+
+.header__wrapper {
+  max-width: 1440px;
+  margin: 0 auto;
+  margin-bottom: 170px;
+  padding-top: 80px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.header__logo {
+  font-family: "FivoSansHeavy", sans-serif;
+  font-size: 32px;
+  line-height: 48px;
+  color: #ff6a6d;
+}
+
+.header__login {
+  width: 140px;
+  height: 42px;
+  border: none;
+  border-radius: 21px;
+  background-color: #ff6a6d;
+  color: #ffffff;
+}
+
+.header__login:hover {
+  background-color: transparent;
+  color: #ff6a6d;
+  width: 138px;
+  border: 2px solid #ff6a6d;
+}
+
+.nav__list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  width: 475px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.nav__link {
+  color: #1c2056;
+  text-decoration: none;
+  opacity: .5;
+  line-height: 36px;
+}
+
+.nav__link:hover {
+  opacity: 1;
+}
+
+.nav__link--active {
+  font-family: "FivoSansBold", sans-serif;
+  color: #ff6a6d;
+  opacity: 1;
+}
+
+.intro {
+  width: 1170px;
+  margin: 0 auto;
+}
+
+.intro__title {
+  margin: 0;
+  margin-bottom: 60px;
+  padding: 0;
+  font-family: "FivoSansBold", sans-serif;
+  width: 560px;
+  font-size: 50px;
+  line-height: 60px;
+  color: #3b3838;
+}
+
+.intro__text {
+  width: 475px;
+  margin: 0;
+  padding: 0;
+  line-height: 40px;
+  opacity: .65;
+}
+
+.intro__wrapper {
+  width: 510px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin: 0;
+  margin-top: 70px;
+  padding: 0;
+}
+
+.intro__buttons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-radius: 40px;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.intro__buttons--pink {
+  width: 240px;
+  height: 80px;
+  color: #ffffff;
+  background-color: #ff6a6d;
+}
+
+.intro__buttons--pink:hover {
+  color: #f82a56;
+  background-color: transparent;
+  width: 236px;
+  height: 76px;
+  border: 2px solid #ff6a6d;
+}
+
+.intro__buttons--transporent {
+  color: #f82a56;
+  width: 236px;
+  height: 76px;
+  border: 2px solid #ff6a6d;
+}
+
+.intro__buttons--transporent:hover {
+  color: #ffffff;
+  background-color: #ff6a6d;
+}
+
+.advantage {
+  width: 100%;
+  margin-top: -50px;
+}
+
+.advantage__title {
+  text-align: center;
+  margin: 0;
+  margin-bottom: 40px;
+  padding: 0;
+  font-family: "FivoSansBold", sans-serif;
+  color: #3b3838;
+  font-size: 50px;
+  line-height: 60px;
+}
+
+.advantage__text {
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  opacity: .65;
+}
+
+.advantage__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 1220px;
+  margin: 0 auto;
+  margin-top: 150px;
+  padding: 0;
+  background: url("../image/icon_advantage.png");
+  background-position-x: 50%;
+  background-repeat: no-repeat;
+}
+
+.advantage__item {
+  margin: 0;
+  margin-top: 290px;
+  padding: 0;
+  width: 250px;
+  text-align: center;
+}
+
+.advantage__item-title {
+  font-family: "FivoSansBold", sans-serif;
+  margin: 0;
+  margin-bottom: 15px;
+  padding: 0;
+  font-size: 24px;
+  line-height: 60px;
+  color: #3b3838;
+}
+
+.advantage__item-text {
+  margin: 0;
+  padding: 0;
+  line-height: 27px;
+  opacity: .65;
+}
+
+.question {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin: 0 auto;
+  margin-bottom: 270px;
+  padding: 0;
+  padding-top: 250px;
+  max-width: 1920px;
+  background: url("../image/branch.png") left bottom no-repeat, url("../image/cloud.png") right 130px no-repeat;
+}
+
+.question__wrapper {
+  width: 550px;
+}
+
+.question__title {
+  margin: 0;
+  margin-top: 50px;
+  margin-bottom: 90px;
+  padding: 0;
+  font-family: "FivoSansBold", sans-serif;
+  font-size: 50px;
+  line-height: 60px;
+  color: #3b3838;
+}
+
+.question__list {
+  margin: 0;
+  padding: 0;
+  padding-left: 70px;
+  list-style: url("../image/icon_check.png");
+}
+
+.question__item-title {
+  margin: 0;
+  padding: 0;
+  font-family: "FivoSansBold", sans-serif;
+  font-size: 24px;
+  line-height: 40px;
+  opacity: .75;
+}
+
+.question__item-text {
+  margin: 0;
+  margin-bottom: 50px;
+  padding: 0;
+  opacity: .65;
+}
+
+.news {
+  max-width: 1920px;
+  margin-bottom: 250px;
+  background: url("../image/cloud_news_left.png") left 50% no-repeat, url("../image/branch_right.png") right 55% no-repeat, url("../image/cloud_news_right.png") right 45% no-repeat;
+}
+
+.news__content {
+  width: 1440px;
+  margin: 0 auto;
+  margin-bottom: 150px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.news__content:first-child {
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: row-reverse;
+          flex-direction: row-reverse;
+}
+
+.news__title {
+  margin: 0 100px 70px 100px;
+  padding: 0;
+  padding-top: 70px;
+  font-family: "FivoSansBold", sans-serif;
+  font-size: 50px;
+  line-height: 60px;
+  color: #3b3838;
+}
+
+.news__title span {
+  font-family: "FivoSansOblique", sans-serif;
+  display: block;
+  font-size: 20px;
+  line-height: 40px;
+  color: #000000;
+  opacity: .5;
+}
+
+.news__title span::after {
+  content: " ______";
+}
+
+.news__title--big {
+  width: 693px;
+}
+
+.news__text {
+  margin: 0;
+  padding: 0;
+  padding-left: 150px;
+  opacity: .65;
+}
+
+.news__text--small {
+  width: 380px;
+}
+
+.news__text--big {
+  width: 555px;
+}
+
+.news__link {
+  margin: 0;
+  padding: 0;
+  padding-left: 150px;
+  color: #3cbef1;
+  text-decoration: none;
+  font-family: "FivoSansOblique", sans-serif;
+}
+
+.news__link::after {
+  content: ' >';
+}
+
+.news__link:hover {
+  color: #1c2056;
+}
+
+.price {
+  margin-bottom: 220px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.price__card {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 470px;
+  height: 690px;
+  background-color: #ffffff;
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+.price__card--main {
+  width: 500px;
+  height: 770px;
+}
+
+.price__card:nth-child(1) {
+  -webkit-box-shadow: -29px 30px 30px 0px rgba(255, 106, 109, 0.15);
+          box-shadow: -29px 30px 30px 0px rgba(255, 106, 109, 0.15);
+}
+
+.price__card:nth-child(3) {
+  -webkit-box-shadow: 28px 31px 30px 0px rgba(255, 106, 109, 0.15);
+          box-shadow: 28px 31px 30px 0px rgba(255, 106, 109, 0.15);
+}
+
+.price__card:nth-child(2) {
+  z-index: 2;
+  -webkit-box-shadow: 42px 1px 30px 0px rgba(255, 106, 109, 0.15), -42px 1px 30px 0px rgba(255, 106, 109, 0.15);
+          box-shadow: 42px 1px 30px 0px rgba(255, 106, 109, 0.15), -42px 1px 30px 0px rgba(255, 106, 109, 0.15);
+}
+
+.price__card-title {
+  margin: 0;
+  margin-top: 75px;
+  margin-bottom: 50px;
+  padding: 0;
+  font-family: "FivoSansBold", sans-serif;
+  text-align: center;
+  font-size: 30px;
+  line-height: 30px;
+  color: #3b3838;
+  opacity: .8;
+}
+
+.price__card-title--main {
+  margin: 0;
+  margin-bottom: 50px;
+  padding: 40px;
+  color: #ffffff;
+  text-transform: uppercase;
+  background-color: #ff6a6d;
+}
+
+.price__list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.price__list--first {
+  padding-top: 70px;
+}
+
+.price__item {
+  margin: 0;
+  padding: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.price__check {
+  margin: 0;
+  padding: 0;
+  padding-left: 60px;
+  padding-right: 30px;
+  padding-bottom: 30px;
+}
+
+.price__text {
+  margin: 0;
+  padding: 0;
+  line-height: 38px;
+  color: #3b3838;
+  opacity: .75;
+}
+
+.price__value {
+  display: inline;
+  position: relative;
+  margin: 0 auto;
+  padding: 0;
+  padding-top: 30px;
+  text-align: center;
+  font-family: "FivoSansRegular", sans-serif;
+  font-size: 150px;
+  line-height: 150px;
+  color: #3b3838;
+  opacity: .75;
+}
+
+.price__value span:nth-child(1) {
+  position: absolute;
+  top: 35px;
+  left: -40px;
+  font-size: 48px;
+  line-height: 30px;
+}
+
+.price__value span:nth-child(2) {
+  font-size: 30px;
+  line-height: 30px;
+}
+
+.price__payment-time {
+  margin: 0;
+  margin-bottom: 60px;
+  padding: 0;
+  text-align: center;
+  font-family: "FivoSansOblique", sans-serif;
+  line-height: 30px;
+  color: #3b3838;
+  opacity: .75;
+}
+
+.price__button-member {
+  display: inline;
+  text-align: center;
+  margin: 0 auto;
+  margin-bottom: 50px;
+  padding: 0;
+  width: 220px;
+  height: 75px;
+  line-height: 75px;
+  border-radius: 38px;
+  background: linear-gradient(51deg, #5fcef5 0%, #83e3fb 100%);
+  -webkit-box-shadow: -14px 16px 20px 0px rgba(95, 206, 244, 0.29);
+          box-shadow: -14px 16px 20px 0px rgba(95, 206, 244, 0.29);
+  font-family: "FivoSansRegular", sans-serif;
+  color: #ffffff;
+  cursor: pointer;
+}
+
+.price__button-member:hover {
+  color: rgba(28, 32, 86, 0.7);
+  background: linear-gradient(51deg, #83e3fb 0%, #5fcef5 100%);
+}
+
+.price__button-member--main {
+  background: #ff6a6d;
+  -webkit-box-shadow: -14px 16px 20px 0px rgba(255, 106, 109, 0.29);
+          box-shadow: -14px 16px 20px 0px rgba(255, 106, 109, 0.29);
+}
+
+.price__button-member--main:hover {
+  background: #ff6a6d;
+}
+
+.footer {
+  margin: 0;
+  padding: 0;
+  padding-top: 60px;
+  background: url("../image/footer_card.png") 50% top no-repeat, url("../image/footer_eclipse.png") 50% bottom no-repeat;
+}
+
+.footer__content--wrapper {
+  width: 1400px;
+  margin: 0 auto;
+  border-top-left-radius: 176px;
+  border-top-right-radius: 176px;
+  background-color: rgba(255, 255, 255, 0.5);
+}
+
+.footer__wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding-top: 100px;
+  margin-bottom: 100px;
+}
+
+.footer__list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.footer__item {
+  margin: 0;
+  padding: 0;
+  width: 265px;
+  font-size: 16px;
+  line-height: 30px;
+  color: #3b3838;
+  opacity: .75;
+}
+
+.footer__item--bottom {
+  margin-bottom: 30px;
+}
+
+.footer__item a {
+  text-decoration: none;
+  color: #3b3838;
+  opacity: .75;
+}
+
+.footer__item a:hover {
+  color: #1c2056;
+}
+
+.footer__title {
+  margin: 0;
+  margin-bottom: 50px;
+  padding: 0;
+  font-family: "FivoSansBold", sans-serif;
+  color: #3b3838;
+  opacity: .75;
+  font-size: 20px;
+  line-height: 36px;
+  text-transform: uppercase;
+}
+
+.footer__copyright {
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  font-family: "FivoSansRegular", sans-serif;
+  line-height: 36px;
+  color: #3b3838;
+  opacity: .7;
+}
+/*# sourceMappingURL=main.css.map */
