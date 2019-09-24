@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Booking - Hotel</title>
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+    integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,700&display=swap&subset=cyrillic"
+    rel="stylesheet">
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body>
+
+  <header class="header">
+    <div class="header__wrapper">
+      <div class="container">
+        <div class="row">
+          <div class="col  col-sm-4">
+          </div>
+          <div class="col  col-sm-8">
+            <h1 class="header__title"></h1>
+            <p class="header__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quod alias aspernatur
+              autem aliquid, iusto a
+              incidunt perspiciatis dolorem, aut amet impedit deleniti sit, eaque atque minus vitae repudiandae
+              dignissimos eos.</p>
+            <div class="form__wrapper">
+              <form action="">
+                <div class="form-group">
+                  <label for="yourDirection">Ваше направление (eng)</label>
+                  <input type="text" class="form-control" id="yourDirection" aria-describedby="yourDirection"
+                    placeholder="Дубаи" data-validation="country">
+                </div>
+                <div class="row">
+                  <div class="col-sm-6">
+                    <div class="form-group">
+                      <label for="arrivalDate">Дата заезда</label>
+                      <input type="date" class="form-control" id="arrivalDate" aria-describedby="arrivalDate"
+                        data-validation="date">
+                    </div>
+                  </div>
+                  <div class="col-sm-6">
+                    <div class="form-group">
+                      <label for="departureDate">Дата отъезда</label>
+                      <input type="date" class="form-control" id="departureDate" aria-describedby="departureDate"
+                        data-validation="date">
+                    </div>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-sm-4">
+                    <div class="form-group">
+                      <label for="rooms">Комната</label>
+                      <select class="form-control" name="rooms" id="rooms">
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                      </select>
+                    </div>
+                  </div>
+                  <div class="col-sm-4">
+                    <div class="form-group">
+                      <label for="adults">Взрослые</label>
+                      <select class="form-control" name="adults" id="adults">
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                      </select>
+                    </div>
+                  </div>
+                  <div class="col-sm-4">
+                    <div class="form-group">
+                      <label for="children">Дети</label>
+                      <select class="form-control" name="children" id="children">
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                      </select>
+                    </div>
+                  </div>
+                </div>
+                <button class="button">Зарегэстрироваться</button>
+              </form>
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+  </header>
+
+
+
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+    integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous">
+  </script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+    integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous">
+  </script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+    integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous">
+  </script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/jquery-form-validator/2.3.26/jquery.form-validator.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.11"></script>
+  <script src="js/script.js"></script>
+</body>
+
+</html>
