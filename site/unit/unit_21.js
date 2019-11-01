@@ -134,11 +134,8 @@ document.querySelector('.div-10').addEventListener('touchmove', t10);
 
 function t11(event) {
 
-  console.log(event.touches.item(0));
-
-
-  document.querySelector('.out-11').innerHTML += event.touches.item(0).radiusX;
-
+  document.querySelector('.out-11').innerHTML = `Радиус события radiusX: ${event.touches.item(0).radiusX}`;
+  document.querySelector('.out-11').innerHTML = `Радиус события radiusX: ${event.touches.item(0).radiusY}`;
 }
 
 document.querySelector('.div-11').addEventListener('touchstart', t11);
