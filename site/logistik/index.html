@@ -7,6 +7,8 @@
   <title>PTK Логистик</title>
 
   <link rel="stylesheet" href="css/style.min.css">
+
+  <script type="text/javascript" src="js/jquery.min.js"></script>
 </head>
 
 <body>
@@ -27,7 +29,7 @@
       </nav>
       <div class="header-contact">
         <a href="tel:+74997500979" class="header-contact__phone">+7 (499) 750 09 79</a>
-        <a href="" class="header-contact__callback">Заказать звонок</a>
+        <a class="header-contact__callback  callback">Заказать звонок</a>
       </div>
     </div>
     <div class="header__info">
@@ -305,7 +307,7 @@
           </li>
           <li class="footer-contact__item">
             <a href="tel:+74997500979" class="footer-contact__phone">+7 (499) 750 09 79</a>
-            <a href="" class="footer-contact__callback">Заказать звонок</a>
+            <a class="footer-contact__callback  callback">Заказать звонок</a>
           </li>
         </ul>
         <div class="footer-contact__copyring">
@@ -320,9 +322,19 @@
     </div>
   </footer>
   <section class="modal">
-    
+    <div class="modal__wrapper">
+      <span class="close">&times;</span>
+      <h2 class="modal__title">Оставьте свои контакты</h2>
+      <p class="modal__text">Наш менеджер свяжется с Вами в <span class="orange">течение 15 минут</span></p>
+
+      <form enctype="multipart/form-data" method="post" id="form" class="modal__form">
+        <input placeholder="Имя" name="name" type="text" class="modal__input">
+        <input placeholder="+7 777 77 77 777" name="number" type="text" class="modal__input">
+        <p><input value="Оставить контакты" type="submit" class="button  modal__button"></p>
+      </form>
+    </div>
   </section>
-  <script src="js/js.min.js"></script>
+  <script src="js/js.js"></script>
 </body>
 
 </html>
