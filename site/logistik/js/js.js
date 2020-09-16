@@ -1,5 +1,6 @@
 "use strict";
-// tabs  настройки
+
+// Переключение tab-ов
 let tabsWrap = document.querySelector(".tabs__list");
 
 tabsWrap.addEventListener("click", function (event) {
@@ -21,13 +22,3 @@ tabsWrap.addEventListener("click", function (event) {
     }
   }
 });
-
-function t3() {
-  document.querySelector('.services__description').style.bottom = 60 + 'px';
-}
-function t4() {
-  document.querySelector('.services__description').style.bottom = -350 + 'px';
-}
-
-document.querySelector('.services__item').onmouseenter = t3;
-document.querySelector('.services__item').onmouseleave = t4;
