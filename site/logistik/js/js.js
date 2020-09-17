@@ -23,6 +23,29 @@ tabsWrap.addEventListener("click", function (event) {
   }
 });
 
+// Переключение tab-ов
+let accsWrap = document.querySelector(".accs__list");
+
+accsWrap.addEventListener("click", function (event) {
+  if (event.target.className == "accs__item") {
+    let dataAccs = event.target.getAttribute("data-tab");
+    let accs = document.getElementsByClassName("accs__item");
+    for (let i = 0; i < accs.length; i++) {
+      accs[i].classList.remove("active");
+    }
+    event.target.classList.add("active");
+
+    let content = document.getElementsByClassName("accs__content");
+    for (let i = 0; i < content.length; i++) {
+      if (dataAccs == i) {
+        content[i].classList.add("active");
+      } else {
+        content[i].classList.remove("active");
+      }
+    }
+  }
+});
+
 
 // Modal окно
 var modal = document.querySelector(".modal");
