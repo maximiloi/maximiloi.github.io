@@ -1206,7 +1206,7 @@ body {
       .footer-contact__callback:hover {
         color: #FB9B21; }
     .footer-contact__copyring {
-      margin-top: 180px;
+      margin-top: 150px;
       font-size: 15px;
       line-height: 20px; }
       .footer-contact__copyring a {
@@ -1215,6 +1215,9 @@ body {
       @media (max-width: 1174px) {
         .footer-contact__copyring {
           margin-left: 20px; } }
+      .footer-contact__copyring-art {
+        margin-top: 30px;
+        margin-bottom: 20px; }
   .footer__map {
     position: relative;
     width: 50%;
