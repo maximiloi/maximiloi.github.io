@@ -499,13 +499,15 @@ body {
         height: auto;
         justify-content: center; } }
   .statistics__item {
+    position: relative;
     width: 235px;
     display: flex;
     justify-content: center;
     flex-direction: column;
     align-items: center;
     border-left: 0.25px solid #FFFFFF;
-    cursor: pointer; }
+    cursor: pointer;
+    overflow: hidden; }
     .statistics__item:first-child {
       border: none; }
     .statistics__item:hover {
@@ -524,6 +526,16 @@ body {
         padding: 25px;
         border: none;
         border-top: 0.25px solid #FFFFFF; } }
+    .statistics__item:hover .statistics__wrapper {
+      transform: translateY(280px); }
+  .statistics__wrapper {
+    position: absolute;
+    width: 235px;
+    height: 100%;
+    top: -280px;
+    display: flex;
+    align-items: center;
+    background: #FFFFFF; }
   .statistics__number {
     font-size: 40px;
     line-height: 49px;
@@ -533,6 +545,12 @@ body {
     line-height: 22px;
     font-weight: 500;
     text-align: center; }
+    .statistics__text--padding {
+      padding: 10px; }
+      @media (max-width: 768px) {
+        .statistics__text--padding {
+          font-size: 14px;
+          line-height: 18px; } }
   .statistics__dots {
     width: 160px;
     height: 120px;
@@ -586,20 +604,46 @@ body {
     overflow: hidden; }
     .services__item:nth-child(1) {
       background: no-repeat 50% 10% url("../images/sec-3/transportation.png"), #FFFFFF; }
+      .services__item:nth-child(1):hover .services__description {
+        transform: translateY(-480px); }
+        @media (max-width: 320px) {
+          .services__item:nth-child(1):hover .services__description {
+            transform: translateY(-460px); } }
     .services__item:nth-child(2) {
       background: no-repeat 50% 10% url("../images/sec-3/railway.png"), #FFFFFF; }
+      .services__item:nth-child(2):hover .services__description {
+        transform: translateY(-555px); }
     .services__item:nth-child(3) {
       background: no-repeat 50% 10% url("../images/sec-3/oversized.png"), #FFFFFF; }
+      .services__item:nth-child(3):hover .services__description {
+        transform: translateY(-495px); }
+        @media (max-width: 375px) {
+          .services__item:nth-child(3):hover .services__description {
+            transform: translateY(-450px); } }
+        @media (max-width: 320px) {
+          .services__item:nth-child(3):hover .services__description {
+            transform: translateY(-400px); } }
     .services__item:nth-child(4) {
       background: no-repeat 50% 10% url("../images/sec-3/special.png"), #FFFFFF; }
+      .services__item:nth-child(4):hover .services__description {
+        transform: translateY(-535px); }
+        @media (max-width: 320px) {
+          .services__item:nth-child(4):hover .services__description {
+            transform: translateY(-480px); } }
     .services__item:nth-child(5) {
       background: no-repeat 50% 10% url("../images/sec-3/freight-forwarding.png"), #FFFFFF; }
+      .services__item:nth-child(5):hover .services__description {
+        transform: translateY(-615px); }
+        @media (max-width: 320px) {
+          .services__item:nth-child(5):hover .services__description {
+            transform: translateY(-580px); } }
     .services__item:nth-child(6) {
       background: no-repeat 50% 10% url("../images/sec-3/refrigerator.png"), #FFFFFF; }
+      .services__item:nth-child(6):hover .services__description {
+        transform: translateY(-610px); }
     .services__item:hover .services__item-name {
       background-color: #FB9B21; }
     .services__item:hover .services__description {
-      transform: translateY(-500px);
       transition-timing-function: linear;
       transition-duration: 1s; }
     @media (max-width: 768px) {
@@ -607,21 +651,21 @@ body {
         width: 350px; } }
     .services__item-name {
       position: absolute;
-      bottom: -36px;
+      bottom: -60px;
       left: -10px;
       width: 410px;
       height: 200px;
       background-color: #3069d6;
-      transform: rotate(-12deg);
+      transform: rotate(-7deg);
       color: white;
       cursor: pointer; }
     .services__item-title {
       width: 180px;
-      margin-left: 50px;
-      padding-top: 55px;
+      margin-left: 38px;
+      padding-top: 32px;
       font-size: 24px;
       font-weight: 700;
-      transform: rotate(12deg); }
+      transform: rotate(7deg); }
       @media (max-width: 450px) {
         .services__item-title {
           font-size: 22px; } }
@@ -632,7 +676,7 @@ body {
             width: 280px; } }
   .services__description {
     position: absolute;
-    bottom: -450px;
+    bottom: -520px;
     display: block;
     padding-bottom: 200px;
     background: rgba(5, 31, 81, 0.82);
@@ -645,12 +689,12 @@ body {
     .services__description-item {
       position: relative;
       margin-left: 20px;
-      font-size: 15px;
-      line-height: 26px;
+      font-size: 14px;
+      line-height: 20px;
       font-weight: 500; }
       .services__description-item:before {
         position: absolute;
-        top: 8px;
+        top: 4px;
         left: -15px;
         display: block;
         content: '';
@@ -660,10 +704,10 @@ body {
         background: #FB9B21; }
   .services__subtitle {
     margin: 0;
-    margin-bottom: 13px;
     padding: 27px;
-    font-size: 18px;
-    line-height: 22px;
+    padding-bottom: 10px;
+    font-size: 16px;
+    line-height: 20px;
     font-weight: 500; }
 
 .advantage {
@@ -894,10 +938,10 @@ body {
     margin: 0 auto;
     margin-top: 30px;
     display: flex;
-    justify-content: space-between; }
+    justify-content: space-between;
+    flex-wrap: wrap; }
     @media (max-width: 650px) {
       .destinations__list {
-        flex-wrap: wrap;
         justify-content: space-around; } }
   @media (max-width: 450px) {
     .destinations__town {
@@ -905,7 +949,7 @@ body {
   .destinations__text {
     position: relative;
     margin-left: 28px;
-    margin-bottom: 105px; }
+    margin-bottom: 25px; }
     .destinations__text:before {
       position: absolute;
       top: 8px;
@@ -917,9 +961,6 @@ body {
       background: #FB9B21;
       box-shadow: 0px 0px 20px #FF9E22;
       border-radius: 8px; }
-    @media (max-width: 650px) {
-      .destinations__text {
-        margin-bottom: 20px; } }
   .destinations__images {
     display: block;
     margin-left: auto;
@@ -929,6 +970,10 @@ body {
     @media (max-width: 1174px) {
       .destinations__images {
         width: 100%; } }
+  .destinations__map {
+    max-width: 1174px;
+    margin: 0 auto;
+    padding-bottom: 105px; }
 
 .professionals {
   max-width: 1174px;
