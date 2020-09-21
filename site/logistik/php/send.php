@@ -1,66 +1,59 @@
 <?php
 // Файлы phpmailer
-require 'class.phpmailer.php';
-require 'class.smtp.php';
+require 'phpmailer/PHPMailer.php';
+require 'phpmailer/SMTP.php';
+//require 'phpmailer/Exception.php';
 
+// Переменные, которые отправляет пользователь
 $name = $_POST['name'];
-$number = $_POST['number'];
 $email = $_POST['email'];
+$number = $_POST['number'];
+$date = $_POST['date'];
 
-// Настройки
-$mail = new PHPMailer;
-$mail->CharSet = 'utf-8';
+// Формирование самого письма
+$title = "Посетитель сайта rtklog.ru ждет Вашего звонка";
+$body = "
+<h2>Данные посетителя:</h2>
+<b>Имя:</b> $name<br>
+<b>Почта:</b> $email<br>
+<b>Номер телефона:</b> $number<br><br>
+<b>Сообщение:</b><br>$text
+";
 
-$mail->isSMTP(); 
-$mail->Host = 'ssl://server216.hosting.reg.ru';
-$mail->SMTPAuth = true;                      
-$mail->Username = 'robot@imbir-dostavka.ru'; // Ваш логин в Яндексе. Именно логин, без @yandex.ru
-$mail->Password = 'B2o3R0x6'; // Ваш пароль
-//$mail->SMTPSecure = 'ssl';                            
-$mail->Port = 465;
-$mail->setFrom('robot@imbir-dostavka.ru'); // Ваш Email
+// Настройки PHPMailer
+$mail = new PHPMailer\PHPMailer\PHPMailer();
+try {
+    $mail->isSMTP();   
+    $mail->CharSet = "UTF-8";
+    $mail->SMTPAuth   = true;
+    //$mail->SMTPDebug = 2;
+    $mail->Debugoutput = function($str, $level) {$GLOBALS['status'][] = $str;};
 
-//$mail->addAddress('imbirdostavkasushi@inbox.ru'); // Email получателя
-$mail->addAddress('maxim.iloi@yandex.ru');
-//$mail->addAddress('maximiloi@gmail.com'); // Еще один email, если нужно.
+    // Настройки вашей почты
+    $mail->Host       = 'smtp.yandex.ru'; // SMTP сервера вашей почты
+    $mail->Username   = 'your_login'; // Логин на почте
+    $mail->Password   = 'password'; // Пароль на почте
+    $mail->SMTPSecure = 'ssl';
+    $mail->Port       = 465;
+    $mail->setFrom('mail@yandex.ru', 'Имя отправителя'); // Адрес самой почты и имя отправителя
 
+    // Получатель письма
+    $mail->addAddress('youremail@yandex.ru');  
+    $mail->addAddress('youremail@gmail.com'); // Ещё один, если нужен
 
-$message = '<table>';
-$message .='<tr style="background-color: #f8f8f8">
-				<td colspan="1" valign="center" 	style="padding: 15px; border: #e9e9e9 1px solid;">Название блюда</td>
-				<td colspan="1" align="center" valign="center" 	style="padding: 15px; border: #e9e9e9 1px solid;">Количество</td>
-				<td colspan="1" align="center" valign="center" 	style="padding: 15px; border: #e9e9e9 1px solid;">Цена</td>
-			</td>';
+// Отправка сообщения
+$mail->isHTML(true);
+$mail->Subject = $title;
+$mail->Body = $body;    
 
-$cart = $_POST['cart'];
-$sum = 0;
+// Проверяем отравленность сообщения
+if ($mail->send()) {$result = "success";} 
+else {$result = "error";}
 
-foreach ($cart as $id=>$count) {
-
-    $message .='<tr style="background-color: #fff">
-							<td valign="center" style="padding: 15px; border: #e9e9e9 1px solid;">' .$json[$id]['name']. '</td>';
-    $message .='<td align="center" valign="center" style="padding: 15px; border: #e9e9e9 1px solid;">' .$count. '</td>';
-    $message .='<td align="center" valign="center" style="padding: 15px; border: #e9e9e9 1px solid;">' .$count*$json[$id]['cost']. '₽</td></td>';
-
-    $sum = $sum +$count*$json[$id]['cost'];
+} catch (Exception $e) {
+    $result = "error";
+    $status = "Сообщение не было отправлено. Причина ошибки: {$mail->ErrorInfo}";
 }
 
-$message .='<tr style="background-color: #f8f8f8">
-			  <td colspan="1"  valign="center" style="padding: 15px; border: #e9e9e9 1px solid;">К оплате</td>
-			  <td colspan="2" align="center" valign="center" style="padding: 15px; border: #e9e9e9 1px solid;">' .$sum.'₽</td>
-			</td>';
-
-$message .='<p>Имя клиента: '.$_POST['ename'].'</p>';
-$message .='<p>Номер телефона: +'.$_POST['ephone'].'</p>';
-
-$mail->Subject = '"ИМБИРЬ" - Новый заказ на сумму ' .$sum.'₽';
-$mail->Body    = $message;
-$mail->AltBody = '';
-
-
-if(!$mail->send()) {
-    echo 'Error';
-} else {
-    return true;
-}
-?>
+// Отображение результата
+echo json_encode(["result" => $result, "resultfile" => $rfile, "status" => $status]);

@@ -7,6 +7,7 @@
   <title>PTK Логистик</title>
 
   <link rel="stylesheet" href="css/style.min.css">
+  <link rel="stylesheet" href="css/lightzoom.css">
 
   <script type="text/javascript" src="js/jquery.min.js"></script>
 </head>
@@ -28,6 +29,7 @@
               <li class="nav__item"><a href="#services">Услуги</a></li>
               <li class="nav__item"><a href="#destinations">Маршруты</a></li>
               <li class="nav__item"><a href="#contact">Контакты</a></li>
+              <li class="nav__item"><a href="https://www.docdroid.net/HGxra4i/prezentaciya-rtk-logistik-pdf" target="_blank">Презентация</a></li>
             </ul>
           </div>
         </nav>
@@ -162,11 +164,13 @@
         </li>
         <li class="services__item">
           <div class="services__description">
-            <p class="services__subtitle"></p>
+            <p class="services__subtitle">Комплекс работ, включающий  в себя:</p>
             <ul class="services__description-list">
-              <li class="services__description-item">Комплекс работ, включающий в себя автоперевозку груза от
-                грузоотправителя до терминала отправки, погрузоразгрузочные работы, доставка до терминала пункте
-                назначения, качественный приём груза, автоперевозка от терминала до грузополучателя</li>
+              <li class="services__description-item">Автоперевозка груза от грузоотправителя до терминала отправки;</li>
+              <li class="services__description-item">Погрузочно - разгрузочные работы;</li>
+              <li class="services__description-item">Доставка до терминала в пункте назначения;</li>
+              <li class="services__description-item">Качественный приём и сопровождения груза;</li>
+              <li class="services__description-item">Автоперевозка от терминала до грузополучателя.</li>
             </ul>
           </div>
           <div class="services__item-name">
@@ -216,7 +220,9 @@
         </ul>
         <div class="advantage__document">
           <div class="advantage__dots  advantage__dots--up"></div>
-          <img src="images/sec-4/document.jpg" alt="сертификат">
+          <a href="images/sec-4/document-big.jpg" class="lightzoom">
+            <img src="images/sec-4/document.jpg">
+          </a>
           <div class="advantage__dots  advantage__dots--down"></div>
         </div>
       </div>
@@ -249,7 +255,7 @@
 
     <!-- sec-6 -->
     <section class="destinations" id="destinations">
-      <h2 class="destinations__title">Популярные направления грузоперевозок</h2>
+      <h2 class="destinations__title">Специальные предложения по грузоперевозкам</h2>
       <p class="destinations__subtext">Мы ежегодно доставляем более, чем <span class="orange">29 000</span> контейнеров
       </p>
       <ul class="destinations__list">
@@ -268,30 +274,6 @@
         <li class="destinations__town">
           <p class="destinations__text">Красноярск</p>
         </li>
-        <li class="destinations__town">
-          <p class="destinations__text">Иркутск</p>
-        </li>
-        <li class="destinations__town">
-          <p class="destinations__text">Братск</p>
-        </li>
-        <li class="destinations__town">
-          <p class="destinations__text">Улан-Удэ</p>
-        </li>
-        <li class="destinations__town">
-          <p class="destinations__text">Чита</p>
-        </li>
-        <li class="destinations__town">
-          <p class="destinations__text">Екатеринбург</p>
-        </li>
-        <li class="destinations__town">
-          <p class="destinations__text">Южно-Сахалинск</p>
-        </li>
-        <li class="destinations__town">
-          <p class="destinations__text">Петропавловск-Камчатский</p>
-        </li>
-        <li class="destinations__town">
-          <p class="destinations__text">Магадан</p>
-        </li>
       </ul>
       <div class="destinations__map">
         <script type="text/javascript" charset="utf-8" async="" src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A3918c37c4c0d9316191177fb74b90040f6cd313027be889c0194eb9cc831a83f&amp;width=100%25&amp;height=428&amp;lang=ru_RU&amp;scroll=true">
@@ -301,75 +283,42 @@
     </section>
 
     <!-- sec-7 -->
-    <section class="professionals">
-      <h2 class="professionals__title">Вы будете работать с профессионалами</h2>
-      <p class="professionals__subtext">Мы постоянно повышаем квалификацию сотрудников и контролируем качество их работы
-      </p>
-      <div class="professionals__wrapper">
-        <div class="professionals__dots  professionals__dots--up"></div>
-        <ul class="professionals__list">
-          <li class="professionals__item">
-            <img src="images/sec-7/people3.jpg" alt="Ольга Петровна">
-            <p class="professionals__name">Ольга Петровна</p>
-            <p class="professionals__position">Секретарь информация</p>
-          </li>
-          <li class="professionals__item">
-            <img src="images/sec-7/people2.jpg" alt="Олег Павлович">
-            <p class="professionals__name">Олег Павлович</p>
-            <p class="professionals__position">Секретарь информация</p>
-          </li>
-          <li class="professionals__item">
-            <img src="images/sec-7/people1.jpg" alt="Анна Григорьевна">
-            <p class="professionals__name">Анна Григорьевна</p>
-            <p class="professionals__position">Секретарь информация</p>
-          </li>
-        </ul>
-        <div class="professionals__dots  professionals__dots--down"></div>
-      </div>
-    </section>
-
-    <!-- sec-8 -->
     <section class="faq">
       <h2 class="faq__title">Вопросы, которые задают наши клиенты</h2>
       <div class="faq__wrapper  tabs">
         <div class="tabs__list">
           <div class="tabs__item  active" data-tab="0">Как вы можете гарантировать соблюдение сроков доставки?</div>
-          <div class="tabs__item" data-tab="1">Есть ли возможность консолидации сборного груза?</div>
-          <div class="tabs__item" data-tab="2">Есть ли возможность приёма груза на станциях?</div>
-          <div class="tabs__item" data-tab="3">Какое расписание КП?</div>
-          <div class="tabs__item" data-tab="4">Возможен ли мониторинг дислокации груза?</div>
-        </div>
-        <div class="tabs__list">
           <div class="tabs__content active">
             <p class="tabs__text">Над поставленными задачами трудятся подготовленные и опытные сотрудники, с терминалами
               заключены договоры, компания имеет полис страхования.</p>
           </div>
-
+          <div class="tabs__item" data-tab="1">Есть ли возможность консолидации сборного груза?</div>
           <div class="tabs__content">
             <p class="tabs__text">Да, Компания РТК Логистик предоставляет возможность консолидации грузов на
               собственном складе с длительным бесплатным хранением. Удобный автотранспортный подъезд (без заезда в
               Москву, 20 км от МКАД), а также ЖД подъездной путь.</p>
           </div>
-
+          <div class="tabs__item" data-tab="2">Есть ли возможность приёма груза на станциях?</div>
           <div class="tabs__content">
             <p class="tabs__text">Да, компания РТК Логистик осуществляет грузоперевозки по схеме склад-склад.</p>
           </div>
-
+          <div class="tabs__item" data-tab="3">Какое расписание КП?</div>
           <div class="tabs__content">
             <p class="tabs__text">Как правило, контейнерные поезда отправляются каждую неделю. Для каждого направления
               разное расписание.</p>
             <p class="tabs__text">Если Вам нужна информация по конкретному направлению, напишите нам на почту или
               позвоните, мы с удовольствием Вам ответим.</p>
           </div>
-
+          <div class="tabs__item" data-tab="4">Возможен ли мониторинг дислокации груза?</div>
           <div class="tabs__content">
             <p class="tabs__text">Мониторинг груза осуществляется нашими сотрудниками круглосуточно, для получения
               информации о местоположении вашего груза нужно всего лишь связаться с нами.</p>
           </div>
         </div>
+
       </div>
 
-      <div class="faq__wrapper  accs">
+      <!-- <div class="faq__wrapper  accs">
         <div class="accs__list">
           <div class="accs__item  active" data-tab="0">Как вы можете гарантировать соблюдение сроков доставки?</div>
           <div class="accs__content active">
@@ -399,12 +348,12 @@
               информации о местоположении вашего груза нужно всего лишь связаться с нами.</p>
           </div>
         </div>
-      </div>
+      </div> -->
     </section>
 
   </main>
 
-  <!-- sec-9 -->
+  <!-- sec-8 -->
   <footer class="footer">
     <div class="footer__wrapper">
       <section class="footer-contact" id="contact">
@@ -421,7 +370,6 @@
         </ul>
         <div class="footer-contact__copyring">
           <p>© ООО РТК Логистик. Все права защищены</p>
-          <a href="#">Политика конфиденциальности</a>
           <p class="footer-contact__copyring-art">Разработка и продвижение - <a href="https://art-direkt.ru/">АртДирект</a></p>
         </div>
       </section>
@@ -440,11 +388,15 @@
       <form enctype="multipart/form-data" method="post" id="form" class="modal__form">
         <input placeholder="Имя" name="name" type="text" class="modal__input">
         <input placeholder="+7 777 77 77 777" name="number" type="text" class="modal__input">
+        <input placeholder="e-mail" name="email" type="email" class="modal__input">
+        <input placeholder="В какое время Вам позвонить?" name="date" type="text" class="modal__input">
         <p><input value="Оставить контакты" type="submit" class="button  modal__button"></p>
       </form>
     </div>
   </section>
+  <a href="#" class="scrollup">Наверх</a>
   <script src="js/js.js"></script>
+  <script src="js/lightzoom.js"></script>
 </body>
 
 </html>
