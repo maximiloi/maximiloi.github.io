@@ -1100,10 +1100,6 @@ body {
     display: flex;
     border: 1px solid #FFFFFF; }
 
-@media (max-width: 666px) {
-  .tabs {
-    display: none; } }
-
 .tabs__list {
   width: 100%; }
 
@@ -1164,6 +1160,11 @@ body {
   margin: 40px;
   font-size: 20px;
   line-height: 28px; }
+  @media (max-width: 450px) {
+    .tabs__text {
+      margin: 20px;
+      font-size: 16px;
+      line-height: 18px; } }
 
 @media (min-width: 665px) {
   .accs {
@@ -1302,9 +1303,7 @@ body {
   .footer__map {
     position: relative;
     width: 50%;
-    overflow: hidden;
-    background: rgba(5, 30, 78, 0.43);
-    z-index: -1; }
+    overflow: hidden; }
     @media (max-width: 450px) {
       .footer__map {
         width: 100%; } }
