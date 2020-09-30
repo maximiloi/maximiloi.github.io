@@ -905,18 +905,21 @@ button {
 .services {
   padding-top: 150px;
   padding-bottom: 110px; }
-  @media (max-width: 768px) {
-    .services .bg {
-      position: relative; }
-      .services .bg img:nth-child(1) {
-        position: absolute;
-        z-index: -1;
-        top: -262px;
-        left: 50%;
-        transform: translateX(-50%);
-        width: 1920px;
-        height: 1569px;
-        display: block; } }
+  .services .bg {
+    display: none; }
+    @media (max-width: 768px) {
+      .services .bg {
+        display: block;
+        position: relative; }
+        .services .bg img:nth-child(1) {
+          position: absolute;
+          z-index: -1;
+          top: -262px;
+          left: 50%;
+          transform: translateX(-50%);
+          width: 1920px;
+          height: 1569px;
+          display: block; } }
   @media (max-width: 450px) {
     .services {
       padding-top: 50px;
