@@ -35,7 +35,6 @@ async function getMoviesCredits(url) {
 
 // показать фильмы
 function showMovies(movies) {
-    personEl.innerHTML = '';
     moviesWrap.innerHTML = '';
 
     movies.forEach(movie => {
@@ -228,12 +227,15 @@ form.addEventListener('submit', (e) => {
 
 nowPlaying.addEventListener('click', () => {
     getMovies(BASE_URL + NOW_PLAYING_URL + API_KEY + LANG);
+    personEl.innerHTML = '';
 });
 
 discover.addEventListener('click', () => {
     getMovies(BASE_URL + FAV_URL + API_KEY + LANG);
+    personEl.innerHTML = '';
 });
 
 discoverTv.addEventListener('click', () => {
     getMovies(BASE_URL + FAV_URL_TV + API_KEY + LANG);
+    personEl.innerHTML = '';
 });
