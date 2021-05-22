@@ -35,6 +35,7 @@ async function getMoviesCredits(url) {
 
 // показать фильмы
 function showMovies(movies) {
+    personEl.innerHTML = '';
     moviesWrap.innerHTML = '';
 
     movies.forEach(movie => {
