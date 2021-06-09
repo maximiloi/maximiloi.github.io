@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Password Generator</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <div class="pw">
+      <div class="pw_header">
+        <div class="pw_control">
+          <span class="pw_out">Генератор пароля</span>
+          <button class="pw_copy">Копировать в буфер обмена</button>
+        </div>
+      </div>
+      <div class="pw_body">
+        <div class="pw_control">
+          <label for="length">Длина пароля</label>
+          <input type="number" name="" id="length" min="6" max="40" value="20" />
+        </div>
+        <div class="pw_control">
+          <label for="upper">ИСПОЛЬЗОВАТЬ БОЛЬШИЕ БУКВЫ</label>
+          <input type="checkbox" name="" id="upper" />
+        </div>
+        <div class="pw_control">
+          <label for="lower">использовать прописные буквы</label>
+          <input type="checkbox" name="" id="lower" />
+        </div>
+        <div class="pw_control">
+          <label for="number">Ипользовать Цифры</label>
+          <input type="checkbox" name="" id="number" />
+        </div>
+        <div class="pw_control">
+          <label for="symbol">Использовать Символы</label>
+          <input type="checkbox" name="" id="symbol" />
+        </div>
+        <button class="pw_generator">Сгенерировать</button>
+      </div>
+    </div>
+  </body>
+</html>
