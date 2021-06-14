@@ -113,3 +113,28 @@ p {
 .red {
   color: red;
 }
+
+@media (max-width: 450px) {
+  .weather__wrap {
+    display: block;
+    padding: 0 10px;
+    font-size: 0.8rem;
+  }
+
+  .weather-on-field__text {
+    margin-right: 10px;
+  }
+
+  .weather-on-field__text--mobile {
+    font-size: 0.7rem;
+  }
+
+  .weather-on-field__inner:nth-child(2) img {
+    width: 45px;
+    height: 45px;
+  }
+
+  .weather-on-field__inner:nth-child(3) {
+    display: none;
+  }
+}

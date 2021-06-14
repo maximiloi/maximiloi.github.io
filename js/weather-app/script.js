@@ -12,13 +12,13 @@ const weatherOnField = document.querySelector('.weather_on_field');
 const weatherOnBeach = document.querySelector('.weather_on_beach');
 const mapOverlay = document.querySelector('.map-overlay');
 
-navigator.geolocation.getCurrentPosition(function (position) {
-  // поиск координат где находишься
-  lat = position.coords.latitude.toFixed(4);
-  lng = position.coords.longitude.toFixed(4);
+// navigator.geolocation.getCurrentPosition(function (position) {
+//   // поиск координат где находишься
+//   lat = position.coords.latitude.toFixed(4);
+//   lng = position.coords.longitude.toFixed(4);
 
-  getWeatherByLocation(lat, lng);
-});
+//   getWeatherByLocation(lat, lng);
+// });
 
 getWeatherOnField(60.00, 30.26, weatherOnField);
 getWeatherOnField(60.11, 29.94, weatherOnBeach);
@@ -55,8 +55,8 @@ async function getWeatherByLocation(lat, lng) {
   showMap();
 }
 
-async function getWeatherOnField(lat, lon, place) {
-  const URL_FIELD = APIURL8 + '?lat=' + lat + '&lon=' + lon + APISETTINGS + APIKEY;
+async function getWeatherOnField(lat, lng, place) {
+  const URL_FIELD = APIURL8 + '?lat=' + lat + '&lon=' + lng + APISETTINGS + APIKEY;
 
   const response = await fetch(URL_FIELD);
   const data = await response.json();
@@ -74,7 +74,7 @@ async function getWeatherOnField(lat, lon, place) {
   };
 
   const titleEL = document.createElement('h2');
-  titleEL.innerText = 'Прогноз погоды на ' + place.classList;
+  titleEL.innerHTML = place.classList;
 
   const weatherEl = document.createElement('ul');
   weatherEl.classList.add('weather-on-field__list');
@@ -91,7 +91,7 @@ async function getWeatherOnField(lat, lon, place) {
       </div >
       <div class="weather-on-field__inner">
       <img src=" https://openweathermap.org/img/wn/${day.weather[0].icon}@2x.png" alt="${day.weather[0].description}" width="90" height="90">
-        <p class="weather-on-field__text">${day.weather[0].description}</p>
+        <p class="weather-on-field__text weather-on-field__text--mobile">${day.weather[0].description}</p>
       </div>
       <div class="weather-on-field__inner">
         <p class="weather-on-field__text">Расвет: ${(new Date(day.sunrise * 1000)).toLocaleString('ru', optionsTime)}</p>
@@ -104,6 +104,8 @@ async function getWeatherOnField(lat, lon, place) {
   place.innerHTML = '';
   place.appendChild(weatherEl);
   place.insertBefore(titleEL, weatherEl);
+
+  showMap();
 }
 
 function showMap() {
@@ -127,5 +129,7 @@ function colorRed(day) {
 
   if ((new Date(day.dt * 1000)).toLocaleString('ru', weekday) === 'вс') {
     return 'red';
+  } else {
+    return '';
   }
 }
