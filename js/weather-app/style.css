@@ -1,0 +1,115 @@
+@import url("https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@200;400;600&display=swap");
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Source Sans Pro", sans-serif;
+  margin: 0;
+}
+
+p {
+  margin: 0;
+}
+
+.weather-location {
+  display: flex;
+  padding: 2rem 4rem;
+}
+
+.weather {
+  text-align: center;
+}
+
+.weather-location {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.weather_on_field,
+.weather_on_beach {
+  max-width: 600px;
+}
+
+.weather__wrap {
+  display: flex;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.weather__wrapper {
+  display: flex;
+  margin-bottom: 10px;
+}
+
+.weather__inner {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.weather__name {
+  margin: 0;
+}
+
+.weather__name--big {
+  font-size: 3rem;
+  margin-top: 18px;
+}
+
+.weather__description {
+  /* margin: 0; */
+  margin-top: -20px;
+}
+
+.map-overlay {
+  width: 450px;
+  height: 300px;
+  margin: 0 auto;
+  background-color: #fff;
+  position: relative;
+  border-radius: 2px;
+}
+
+#map {
+  max-width: 450px;
+  height: 300px;
+  margin: 0 auto;
+}
+
+.weather-on-field__list {
+  list-style-type: none;
+  padding: 0;
+}
+
+.weather-on-field__item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.weather-on-field__inner {
+  display: flex;
+  align-items: center;
+}
+
+.weather-on-field__inner:nth-child(2) {
+  flex-grow: 2;
+}
+
+.weather-on-field__inner:nth-child(3) {
+  flex-direction: column;
+}
+
+.weather-on-field__text {
+  margin-right: 20px;
+}
+
+.weather-on-field__text--temp {
+  font-weight: 700;
+}
+
+.red {
+  color: red;
+}
