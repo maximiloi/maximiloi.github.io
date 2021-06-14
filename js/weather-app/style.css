@@ -110,7 +110,7 @@ p {
   font-weight: 700;
 }
 
-.red {
+.weather-on-field__item.red {
   color: red;
 }
 
