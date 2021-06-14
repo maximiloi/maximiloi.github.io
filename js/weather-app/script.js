@@ -18,9 +18,10 @@ navigator.geolocation.getCurrentPosition(function (position) {
   lng = position.coords.longitude.toFixed(4);
 
   getWeatherByLocation(lat, lng);
-  getWeatherOnField(60.00, 30.26, weatherOnField);
-  getWeatherOnField(60.11, 29.94, weatherOnBeach)
 });
+
+getWeatherOnField(60.00, 30.26, weatherOnField);
+getWeatherOnField(60.11, 29.94, weatherOnBeach);
 
 
 async function getWeatherByLocation(lat, lng) {
