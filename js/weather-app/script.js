@@ -1,8 +1,8 @@
-const APIURL = 'http://api.openweathermap.org/data/2.5/weather';
-const APIURL8 = 'http://api.openweathermap.org/data/2.5/onecall';
+const APIURL = 'https://api.openweathermap.org/data/2.5/weather';
+const APIURL8 = 'https://api.openweathermap.org/data/2.5/onecall';
 const APIKEY = '&appid=003857592feb5ff0def8aa4fade433b5';
 const APISETTINGS = '&lang=ru&units=metric';
-const APIURLSearch = 'http://api.openweathermap.org/data/2.5/weather?q=';
+const APIURLSearch = 'https://api.openweathermap.org/data/2.5/weather?q=';
 
 let lat = '';
 let lng = '';
@@ -36,7 +36,7 @@ async function getWeatherByLocation(lat, lng) {
     <h3 class="weather__name">Погода сейчас: ${data.name}</h3>
     <div class="weather__wrapper">
       <div class="weather__inner">
-        <img src=" http://openweathermap.org/img/wn/${data.weather[0].icon}@2x.png" alt="" width="100" height="100">
+        <img src=" https://openweathermap.org/img/wn/${data.weather[0].icon}@2x.png" alt="" width="100" height="100">
         <p class="weather__description">${data.weather[0].description}</p>
       </div>
       <div class="weather__inner">
@@ -89,7 +89,7 @@ async function getWeatherOnField(lat, lon, place) {
         <p class="weather-on-field__text  weather-on-field__text--temp">${(day.temp.day).toFixed(0)} / ${(day.temp.night).toFixed(0)} °C</p>
       </div >
       <div class="weather-on-field__inner">
-      <img src=" http://openweathermap.org/img/wn/${day.weather[0].icon}@2x.png" alt="${day.weather[0].description}" width="90" height="90">
+      <img src=" https://openweathermap.org/img/wn/${day.weather[0].icon}@2x.png" alt="${day.weather[0].description}" width="90" height="90">
         <p class="weather-on-field__text">${day.weather[0].description}</p>
       </div>
       <div class="weather-on-field__inner">
