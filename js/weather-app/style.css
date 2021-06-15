@@ -29,13 +29,14 @@ p {
 
 .weather_on_field,
 .weather_on_beach {
-  max-width: 600px;
+  width: 48%;
 }
 
 .weather__wrap {
   display: flex;
   max-width: 1200px;
   margin: 0 auto;
+  column-gap: 2%;
 }
 
 .weather__wrapper {
@@ -64,7 +65,7 @@ p {
 }
 
 .map-overlay {
-  width: 450px;
+  width: 100%;
   height: 300px;
   margin: 0 auto;
   background-color: #fff;
@@ -72,8 +73,8 @@ p {
   border-radius: 2px;
 }
 
-#map {
-  max-width: 450px;
+.map {
+  width: 100%;
   height: 300px;
   margin: 0 auto;
 }
@@ -87,6 +88,7 @@ p {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  flex-wrap: wrap;
 }
 
 .weather-on-field__inner {
@@ -102,6 +104,10 @@ p {
   flex-direction: column;
 }
 
+.weather-on-field__wrapper {
+  color: black;
+}
+
 .weather-on-field__text {
   margin-right: 20px;
 }
@@ -110,8 +116,46 @@ p {
   font-weight: 700;
 }
 
-.weather-on-field__item.red {
+.red {
   color: red;
+}
+
+.table {
+  width: 100%;
+  border: none;
+  margin-bottom: 20px;
+}
+
+.table thead th {
+  font-weight: bold;
+  text-align: left;
+  border: none;
+  padding: 10px 15px;
+  background: #d8d8d8;
+  border-left: 1px solid #ddd;
+  border-right: 1px solid #ddd;
+}
+
+.table tbody td {
+  text-align: left;
+  border-left: 1px solid #ddd;
+  border-right: 1px solid #ddd;
+  padding: 10px 15px;
+  vertical-align: top;
+}
+
+.table thead tr th:first-child,
+.table tbody tr td:first-child {
+  border-left: none;
+}
+
+.table thead tr th:last-child,
+.table tbody tr td:last-child {
+  border-right: none;
+}
+
+.table tbody tr:nth-child(even) {
+  background: #f3f3f3;
 }
 
 @media (max-width: 450px) {
@@ -119,6 +163,11 @@ p {
     display: block;
     padding: 0 10px;
     font-size: 0.8rem;
+  }
+
+  .weather_on_field,
+  .weather_on_beach {
+    width: 100%;
   }
 
   .weather-on-field__text {
@@ -136,5 +185,13 @@ p {
 
   .weather-on-field__inner:nth-child(3) {
     display: none;
+  }
+
+  .table thead th {
+    padding: 2.5px 5px;
+  }
+  
+  .table tbody td {
+    padding: 2.5px 5px;
   }
 }

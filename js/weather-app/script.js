@@ -10,6 +10,7 @@ let lng = '';
 const main = document.querySelector('.main');
 const weatherOnField = document.querySelector('.weather_on_field');
 const weatherOnBeach = document.querySelector('.weather_on_beach');
+const weatherOnFieldWrapper = document.querySelectorAll('.weather-on-field__wrapper');
 const mapOverlay = document.querySelector('.map-overlay');
 
 // navigator.geolocation.getCurrentPosition(function (position) {
@@ -20,8 +21,8 @@ const mapOverlay = document.querySelector('.map-overlay');
 //   getWeatherByLocation(lat, lng);
 // });
 
-getWeatherOnField(60.00, 30.26, weatherOnField);
-getWeatherOnField(60.11, 29.94, weatherOnBeach);
+getWeatherOnField(60.001, 30.260, weatherOnField);
+getWeatherOnField(60.109, 29.947, weatherOnBeach);
 
 
 async function getWeatherByLocation(lat, lng) {
@@ -55,11 +56,16 @@ async function getWeatherByLocation(lat, lng) {
   showMap();
 }
 
-async function getWeatherOnField(lat, lng, place) {
-  const URL_FIELD = APIURL8 + '?lat=' + lat + '&lon=' + lng + APISETTINGS + APIKEY;
+async function getWeatherOnField(lat, lon, place) {
+  const URL_FIELD = APIURL8 + '?lat=' + lat + '&lon=' + lon + APISETTINGS + APIKEY;
 
   const response = await fetch(URL_FIELD);
+  console.log('URL_FIELD: ', URL_FIELD);
   const data = await response.json();
+  // console.log('data: ', data);
+
+  // let dataArrayHourly = data.hourly;
+  let dayDailyArray = data.daily;
 
   let optionsDayMount = { // выводим день недели, число и месяц
     day: 'numeric',
@@ -73,63 +79,122 @@ async function getWeatherOnField(lat, lng, place) {
     second: 'numeric'
   };
 
+  const weekday = { // выводим день недели
+    weekday: 'short',
+  };
+
+  const hour = { // выводим день недели
+    hour: 'numeric',
+  };
+
   const titleEL = document.createElement('h2');
-  titleEL.innerHTML = place.classList;
+  titleEL.innerText = 'Прогноз на ' + place.classList;
 
-  const weatherEl = document.createElement('ul');
-  weatherEl.classList.add('weather-on-field__list');
+  const weatherEl = document.createElement('div');
+  weatherEl.classList.add('weather-on-wrap');
 
-  let dayArray = data.daily;
+  const mapEL = document.createElement('div');
+  mapEL.classList.add('map-overlay');
 
-  dayArray.forEach((day) => {
+  mapEL.innerHTML = `<div class="map"></div>`;
 
-    weatherEl.innerHTML += `
-    <li class="weather-on-field__item ${colorRed(day)}">
-      <div class= "weather-on-field__inner" >
-        <p class="weather-on-field__text">${(new Date(day.dt * 1000)).toLocaleString('ru', optionsDayMount)}</p>
-        <p class="weather-on-field__text  weather-on-field__text--temp">${(day.temp.day).toFixed(0)} / ${(day.temp.night).toFixed(0)} °C</p>
-      </div >
-      <div class="weather-on-field__inner">
-      <img src=" https://openweathermap.org/img/wn/${day.weather[0].icon}@2x.png" alt="${day.weather[0].description}" width="90" height="90">
-        <p class="weather-on-field__text weather-on-field__text--mobile">${day.weather[0].description}</p>
-      </div>
-      <div class="weather-on-field__inner">
-        <p class="weather-on-field__text">Расвет: ${(new Date(day.sunrise * 1000)).toLocaleString('ru', optionsTime)}</p>
-        <p class="weather-on-field__text">Закат: ${(new Date(day.sunset * 1000)).toLocaleString('ru', optionsTime)}</p>
-      </div>
-    </li>
-  `;
+  // const hourlyHTML = document.createElement('ul');
+  // hourlyHTML.classList.add('weatherHourly-on-wrap');
+
+  // dataArrayHourly.forEach(hourly => {
+  //   if ((new Date(hourly.dt * 1000)).toLocaleString('ru', weekday) === 'вс' &&
+  //     (new Date(hourly.dt * 1000)).toLocaleString('ru', hour) === '09' || (new Date(hourly.dt * 1000)).toLocaleString('ru', hour) === '14') {
+  //     hourlyHTML.innerHTML += `<li class="weather__hourly">${(new Date(hourly.dt * 1000)).toLocaleString('ru', optionsDayMount)}${(new Date(hourly.dt * 1000)).toLocaleString('ru', hour)}</li>`;
+  //   }
+  //   // console.log('hourlyHTML: ', hourlyHTML);
+  // });
+
+  dayDailyArray.forEach(day => {
+    if ((new Date(day.dt * 1000)).toLocaleString('ru', weekday) === 'вс') {
+
+      weatherEl.innerHTML += `
+      <ul class="weather-on-field__list">
+        <li class="weather-on-field__item">
+          <div class="weather-on-field__inner" >
+            <p class="weather-on-field__text">${(new Date(day.dt * 1000)).toLocaleString('ru', optionsDayMount)}</p>
+            <p class="weather-on-field__text  weather-on-field__text--temp">${(day.temp.max).toFixed(0)} / ${(day.temp.min).toFixed(0)} °C</p>
+          </div >
+          <div class="weather-on-field__inner">
+          <img src=" https://openweathermap.org/img/wn/${day.weather[0].icon}@2x.png" alt="${day.weather[0].description}" width="90" height="90">
+            <p class="weather-on-field__text">${day.weather[0].description}</p>
+          </div>
+          <div class="weather-on-field__inner">
+            <p class="weather-on-field__text">Расвет: ${(new Date(day.sunrise * 1000)).toLocaleString('ru', optionsTime)}</p>
+            <p class="weather-on-field__text">Закат: ${(new Date(day.sunset * 1000)).toLocaleString('ru', optionsTime)}</p>
+          </div>
+        </li>
+        <li class="weather-on-field__item">
+          <p class="weather-on-field__text">Направление ветра: <i class="fas fa-location-arrow" style="transform:rotate(calc(${day.wind_deg}deg - 45deg)"></i></p>
+          <p class="weather-on-field__text">Скорость ветра: ${day.wind_speed}м/c</p>
+          <p class="weather-on-field__text">Порыв ветра: ${day.wind_gust}м/c</p>
+          <p class="weather-on-field__text">Максимальное значение УФ-индекса за день: ${day.uvi}</p>
+        </li>
+        <li class="weather-on-field__item">
+          <p class="weather-on-field__text">Вероятность выпадения осадков: ${day.pop}</p>
+          <p class="weather-on-field__text">Влажность: ${day.humidity} %</p>
+          <p class="weather-on-field__text">Облачность: ${day.clouds} %</p>
+          <p class="weather-on-field__text">Атмосферное давление на уровне моря: ${day.pressure} гПа</p>
+        </li>
+        <li class="weather-on-field__item">
+          <table class="table">
+            <thead>
+              <tr>
+                <th></th>
+                <th>Утро</th>
+                <th>День</th>
+                <th>Вечер</th>
+                <th>Ночь</th>
+              </tr>
+            </thead>
+
+            <tbody>
+              <tr>
+                <td>Температура</td>
+                <td>${(day.temp.morn).toFixed(1)} °C</td>
+                <td>${(day.temp.day).toFixed(1)} °C</td>
+                <td>${(day.temp.eve).toFixed(1)} °C</td>
+                <td>${(day.temp.night).toFixed(0)} °C</td>
+              </tr>
+              <tr>
+              <td>Ощущается как</td>
+              <td>${(day.feels_like.morn).toFixed(1)} °C</td>
+              <td>${(day.feels_like.day).toFixed(1)} °C</td>
+              <td>${(day.feels_like.eve).toFixed(1)} °C</td>
+              <td>${(day.feels_like.night).toFixed(0)} °C</td>
+            </tr>
+            </tbody>
+          </table>
+        </li>
+      </ul>
+    `;
+    }
   });
 
   place.innerHTML = '';
   place.appendChild(weatherEl);
   place.insertBefore(titleEL, weatherEl);
+  place.insertBefore(mapEL, weatherEl);
+  // place.appendChild(hourlyHTML); //TODO добавление часового прогноза
 
-  showMap();
+  showMap(lat, lon);
 }
 
-function showMap() {
+function showMap(lat, lon) {
   let map = new GMaps({
-    el: '#map',
+    el: '.map',
     zoom: 16,
     lat: lat,
-    lng: lng
+    lng: lon,
+    mapType: 'hybrid'
   });
 
   map.addMarker({
     lat: lat,
-    lng: lng
+    lng: lon
   });
-}
-
-function colorRed(day) {
-  const weekday = { // выводим день недели
-    weekday: 'short',
-  };
-
-  if ((new Date(day.dt * 1000)).toLocaleString('ru', weekday) === 'вс') {
-    return 'red';
-  } else {
-    return '';
-  }
 }
