@@ -181,7 +181,7 @@ async function getWeatherOnField(lat, lon, place) {
   place.insertBefore(mapEL, weatherEl);
   // place.appendChild(hourlyHTML); //TODO добавление часового прогноза
 
-  showMap(lat, lon);
+  // showMap(lat, lon);
 }
 
 function showMap(lat, lon) {
