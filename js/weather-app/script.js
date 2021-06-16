@@ -93,10 +93,10 @@ async function getWeatherOnField(lat, lon, place) {
   const weatherEl = document.createElement('div');
   weatherEl.classList.add('weather-on-wrap');
 
-  const mapEL = document.createElement('div');
-  mapEL.classList.add('map-overlay');
+  // const mapEL = document.createElement('div');
+  // mapEL.classList.add('map-overlay');
 
-  mapEL.innerHTML = `<div class="map"></div>`;
+  // mapEL.innerHTML = `<div class="map+${place.classList}"></div>`;
 
   // const hourlyHTML = document.createElement('ul');
   // hourlyHTML.classList.add('weatherHourly-on-wrap');
@@ -138,7 +138,6 @@ async function getWeatherOnField(lat, lon, place) {
           <p class="weather-on-field__text">Вероятность выпадения осадков: ${day.pop}</p>
           <p class="weather-on-field__text">Влажность: ${day.humidity} %</p>
           <p class="weather-on-field__text">Облачность: ${day.clouds} %</p>
-          <p class="weather-on-field__text">Атмосферное давление на уровне моря: ${day.pressure} гПа</p>
         </li>
         <li class="weather-on-field__item">
           <table class="table">
@@ -178,10 +177,10 @@ async function getWeatherOnField(lat, lon, place) {
   place.innerHTML = '';
   place.appendChild(weatherEl);
   place.insertBefore(titleEL, weatherEl);
-  place.insertBefore(mapEL, weatherEl);
+  // place.insertBefore(mapEL, weatherEl);
   // place.appendChild(hourlyHTML); //TODO добавление часового прогноза
 
-  showMap(lat, lon);
+  // showMap(lat, lon);
 }
 
 function showMap(lat, lon) {
