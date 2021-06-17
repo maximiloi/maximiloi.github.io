@@ -13,6 +13,11 @@ p {
   margin: 0;
 }
 
+h2 {
+  display: inline-block;
+  margin-right: 30px;
+}
+
 .weather-location {
   display: flex;
   padding: 2rem 4rem;
@@ -190,7 +195,7 @@ p {
   .table thead th {
     padding: 2.5px 5px;
   }
-  
+
   .table tbody td {
     padding: 2.5px 5px;
   }
