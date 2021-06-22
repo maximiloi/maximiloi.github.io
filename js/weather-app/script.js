@@ -2,8 +2,8 @@ const APIURL8 = 'https://api.openweathermap.org/data/2.5/onecall';
 const APIKEY = '&appid=003857592feb5ff0def8aa4fade433b5';
 const APISETTINGS = '&lang=ru&units=metric';
 
-const weatherOnField = document.querySelector('.weather_on_field');
-const weatherOnBeach = document.querySelector('.weather_on_beach');
+const weatherOnField = document.querySelector('.weather__on--field');
+const weatherOnBeach = document.querySelector('.weather__on--beach');
 
 getWeatherOnField(60.001, 30.260, weatherOnField);
 getWeatherOnField(60.109, 29.947, weatherOnBeach);
@@ -32,7 +32,7 @@ async function getWeatherOnField(lat, lon, place) {
   };
 
   const titleEL = document.createElement('h2');
-  titleEL.innerHTML = 'Прогноз на ' + (place.className === 'weather_on_field' ? 'поле' : 'пляже');
+  titleEL.innerHTML = 'Прогноз на ' + (place.className === 'weather__on--field' ? 'поле' : 'пляже');
 
   const coordEL = document.createElement('span');
   coordEL.classList.add('ymaps-geolink');
