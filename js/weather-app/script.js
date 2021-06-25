@@ -6,7 +6,7 @@ const weatherOnField = document.querySelector('.weather__on--field');
 const weatherOnBeach = document.querySelector('.weather__on--beach');
 
 getWeatherOnField(60.001, 30.260, weatherOnField);
-getWeatherOnField(60.109, 29.947, weatherOnBeach);
+getWeatherOnField(60.109453, 29.948674, weatherOnBeach);
 
 async function getWeatherOnField(lat, lon, place) {
   const URL_FIELD = APIURL8 + '?lat=' + lat + '&lon=' + lon + APISETTINGS + APIKEY;
