@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-134339247-1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag('js', new Date());
+
+      gtag('config', 'UA-134339247-1');
+    </script>
+
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.6.3/css/all.css"
+      integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/"
+      crossorigin="anonymous"
+    />
+
+    <link href="css/bootstrap-grid.min.css" rel="stylesheet" />
+    <link href="css/bootstrap.min.css" rel="stylesheet" />
+    <link href="style.css" rel="stylesheet" />
+    <link href="tabs.css" rel="stylesheet" />
+
+    <title>Торощин Максим</title>
+  </head>
+
+  <body class="page container d-flex flex-column">
+    <header class="page__header d-flex flex-column-reverse align-items-center flex-md-row align-items-md-end justify-content-end">
+      <div class="page__content d-flex flex-column justify-content-end">
+        <h1 class="page__content--title">Торощин Максим</h1>
+      </div>
+      <picture class="page__avatar">
+        <img class="page__avatar--images rounded-circle" src="img/avart.jpg" alt="Моя фотография" />
+      </picture>
+    </header>
+    <main class="content flex-grow-1 tabs">
+      <input type="radio" name="tabs" id="tab3" />
+      <label for="tab3"><span>Инструменты</span></label>
+
+      <input type="radio" name="tabs" id="tab2" checked />
+      <label for="tab2"><span>Моя верстка</span></label>
+
+      <input type="radio" name="tabs" id="tab1" />
+      <label for="tab1"><span>Обо мне</span></label>
+
+      <section id="tab-content1" class="about-me tab-content">
+        <h2 class="about-me__title invisible">Обо мне</h2>
+        <p class="about-me__text">
+          Родился в Сибири на берегу Ангары. Закончил НОВгу, по специальности ... <span>(впрочем не отработал и дня, как позже выяснилось у меня аллергия)</span> С головой ушел в
+          торговлю <span>(добился, как мне кажется, успехов)</span> Учился в Хтмл Академии.
+        </p>
+        <p class="about-me__text">И сейчас я ищу работу.<span>(изучаю верстку и JavaScript, смотрю кино, слушаю музыку, играю во флаг-футбол)</span></p>
+      </section>
+
+      <section id="tab-content2" class="work tab-content">
+        <h2 class="content__title invisible">Мои работы</h2>
+        <ul class="content__list d-flex flex-wrap justify-content-center">
+          <li class="content_items flex-md-fill">
+            <a href="site/sedona/index.html"><img class="content__img" src="img/sedona-mock.png" alt="" /></a>
+            <i class="fas fa-desktop"></i>
+            <i class="fab fa-html5"></i>
+            <i class="fab fa-css3-alt"></i>
+            <i class="fab fa-js"></i>
+            <i class="fab fa-internet-explorer"></i>
+            <p class="content__text">Учебный проект "<a href="site/sedona/index.html">Седона</a>" <span>реализованы индекс страница и гостиницы</span></p>
+          </li>
+          <li class="content_items flex-md-fill">
+            <a href="site/cat/index.html"><img class="content__img" src="img/cat-mock.png" alt="" /></a>
+            <i class="fas fa-mobile-alt"></i>
+            <i class="fas fa-tablet-alt"></i>
+            <i class="fas fa-desktop"></i>
+            <i class="fab fa-html5"></i>
+            <i class="fab fa-css3-alt"></i>
+            <i class="fab fa-js"></i>
+            <i class="fab fa-npm"></i>
+            <i class="fab fa-less"></i>
+            <i class="fab fa-gulp"></i>
+            <p class="content__text">
+              Учебный проект "<a href="site/cat/index.html">Кэт Энерджи</a>" <span>адаптивная верстка всех трех страниц, для телефона, планшета и десктопа.</span>
+            </p>
+          </li>
+          <li class="content_items flex-md-fill">
+            <a href="site/tort/index.html"><img class="content__img" src="img/tort-mock.png" alt="" /></a>
+            <i class="fas fa-mobile-alt"></i>
+            <i class="fas fa-tablet-alt"></i>
+            <i class="fas fa-desktop"></i>
+            <i class="fab fa-html5"></i>
+            <i class="fab fa-css3-alt"></i>
+            <i class="fab fa-js"></i>
+            <i class="fab fa-npm"></i>
+            <i class="fab fa-less"></i>
+            <i class="fab fa-gulp"></i>
+            <p class="content__text">Проект "<a href="site/tort/index.html">Торты на заказ</a>" <span>адаптивная верстка лендинга, для телефона, планшета и десктопа.</span></p>
+          </li>
+          <li class="content_items flex-md-fill">
+            <a href="site/web/index.html"><img class="content__img" src="img/web-mock.png" alt="" /></a>
+            <i class="fas fa-desktop"></i>
+            <i class="fab fa-html5"></i>
+            <i class="fab fa-css3-alt"></i>
+            <i class="fab fa-js"></i>
+            <i class="fab fa-npm"></i>
+            <i class="fab fa-less"></i>
+            <i class="fab fa-gulp"></i>
+            <p class="content__text">
+              Проект "<a href="site/web/index.html">Портфолио Вебстудии</a>" <span>верстка лендинга для десктопа, с анимацией блоков в шапке сайта.</span>
+            </p>
+          </li>
+          <li class="content_items flex-md-fill">
+            <a href="site/fish/index.html"><img class="content__img" src="img/ryby-mock.png" alt="" /></a>
+            <i class="fas fa-desktop"></i>
+            <i class="fab fa-html5"></i>
+            <i class="fab fa-css3-alt"></i>
+            <i class="fab fa-js"></i>
+            <i class="fab fa-font-awesome"></i>
+            <p class="content__text">
+              Проект "<a href="site/fish/index.html">Интернет-магазина по продаже свежей рыбы</a>"
+              <span>верстка лендинга для десктопа, с настройкой jQuery плагина Owl Carusel 2.</span>
+            </p>
+          </li>
+          <li class="content_items flex-md-fill">
+            <a href="site/surf/index.html"><img class="content__img" src="img/surf-mock.png" alt="" /></a>
+            <i class="fas fa-mobile-alt"></i>
+            <i class="fas fa-tablet-alt"></i>
+            <i class="fas fa-desktop"></i>
+            <i class="fab fa-html5"></i>
+            <i class="fab fa-css3-alt"></i>
+            <i class="fab fa-npm"></i>
+            <i class="fab fa-sass"></i>
+            <i class="fab fa-gulp"></i>
+            <i class="fab fa-font-awesome"></i>
+            <p class="content__text">
+              Проект "<a href="site/surf/index.html">Серф школы</a>" <span>адаптивная верстка, для телефона, планшета и десктопа с помощью фреймворка Bootstrap 4.</span>
+            </p>
+          </li>
+          <li class="content_items flex-md-fill">
+            <a href="site/yoga/index.html"><img class="content__img" src="img/yoga-mock.png" alt="" /></a>
+            <i class="fas fa-desktop"></i>
+            <i class="fab fa-html5"></i>
+            <i class="fab fa-css3-alt"></i>
+            <i class="fab fa-sass"></i>
+            <p class="content__text">
+              Проект "<a href="site/yoga/index.html">Школы йоги</a>" <span> верстка для десктопа с помощью встроенных возможностей Visual Studio Code и предпроцессора SASS</span>
+            </p>
+          </li>
+        </ul>
+      </section>
+
+      <section id="tab-content3" class="tool tab-content">
+        <h2 class="tool__title invisible">Инструменты</h2>
+        <p class="tool__text">Начнем с начала</p>
+        <p class="tool__text">Работаю в macOS Mojave.</p>
+        <p class="tool__text">Разбор макета: Adobe Photoshop, Adobe Assets, Avocode, Zeplin.</p>
+        <p class="tool__text">
+          Код пишу: <a href="https://code.visualstudio.com/" target="_blank" rel="noopener noreferrer">Visual Studio Code</a>. Использую плагины:
+          <a
+            href="https://marketplace.visualstudio.com/items?itemName=formulahendry.auto-close-tag"
+            target="_blank"
+            rel="noopener noreferrer"
+            alt="Плагин для автоматического закрытия тэгов"
+            >Auto Close Tag</a
+          >, <a href="https://marketplace.visualstudio.com/items?itemName=formulahendry.auto-complete-tag" target="_blank" rel="noopener noreferrer">Auto Complete Tag</a>,
+          <a href="https://marketplace.visualstudio.com/items?itemName=formulahendry.auto-rename-tag" target="_blank" rel="noopener noreferrer">Auto Rename Tag</a>,
+          <a href="https://marketplace.visualstudio.com/items?itemName=HookyQR.beautify" target="_blank" rel="noopener noreferrer">Beautify</a>,
+          <a href="https://marketplace.visualstudio.com/items?itemName=michelemelluso.code-beautifier" target="_blank" rel="noopener noreferrer">Beautify css/sass/scss/less</a>,
+          <a href="https://marketplace.visualstudio.com/items?itemName=thekalinga.bootstrap4-vscode" target="_blank" rel="noopener noreferrer"
+            >Bootstrap 4, Font awesome 4, Font Awesome 5 Free & Pro snippets</a
+          >, <a href="https://marketplace.visualstudio.com/items?itemName=naumovs.color-highlight" target="_blank" rel="noopener noreferrer">Color Highlight</a>,
+          <a href="https://marketplace.visualstudio.com/items?itemName=pranaygp.vscode-css-peek" target="_blank" rel="noopener noreferrer">CSS Peek</a>,
+          <a href="https://marketplace.visualstudio.com/items?itemName=ionutvmi.path-autocomplete" target="_blank" rel="noopener noreferrer">Path Autocomplete</a>,
+          <a href="https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint" target="_blank" rel="noopener noreferrer">ESLint</a>,
+          <a href="https://marketplace.visualstudio.com/items?itemName=eamodio.gitlens" target="_blank" rel="noopener noreferrer">GitLens — Git supercharged</a>,
+          <a href="https://marketplace.visualstudio.com/items?itemName=kenhowardpdx.vscode-gist" target="_blank" rel="noopener noreferrer">Gist</a>,
+          <a href="https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer" target="_blank" rel="noopener noreferrer">Live Server</a>,
+          <a href="https://marketplace.visualstudio.com/items?itemName=techer.open-in-browser" target="_blank" rel="noopener noreferrer">Open in browser</a>,
+          <a href="https://marketplace.visualstudio.com/items?itemName=cssho.vscode-svgviewer" target="_blank" rel="noopener noreferrer">SVG Viewer</a>, и чуть других (для
+          украшений :).
+        </p>
+        <p class="tool__text">
+          Использую предпроцессоры <a href="http://lesscss.org" target="_blank" rel="noopener noreferrer">Less</a> или
+          <a href="https://sass-lang.com/" target="_blank" rel="noopener noreferrer">Sass</a>
+        </p>
+        <p class="tool__text">Сборщик <a href="http://gulpjs.com" target="_blank" rel="noopener noreferrer">Gulp</a></p>
+      </section>
+    </main>
+    <section class="page__footer">
+      <div class="page__footer">
+        <footer class="footer">
+          <div class="footer__contacts">
+            <ul class="contacts d-flex flex-wrap">
+              <li class="contacts__item"><a href="mailto:maximiloi@gmail.com">Почта</a></li>
+              <li class="contacts__item"><a href="https://t.me/maximiloi">Телеграм</a></li>
+              <li class="contacts__item"><a href="https://vk.com/maximiloi">ВК</a></li>
+              <li class="contacts__item"><a href="https://github.com/maximiloi">Гитхаб</a></li>
+              <li class="contacts__item"><a href="https://codepen.io/maximiloi/">Кодпен</a></li>
+              <li class="contacts__item"><a href="https://moikrug.ru/maximiloi">Мой круг</a></li>
+              <li class="contacts__item"><a href="https://spb.hh.ru/resume/728f02fcff05c744230039ed1f636130386133">Резюме</a></li>
+            </ul>
+          </div>
+          <p class="footer__text">© 2018 - 2019</p>
+        </footer>
+      </div>
+    </section>
+  </body>
+</html>
