@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+  <link rel="stylesheet" href="style.css">
+
+  <title>Currency Exchange</title>
+</head>
+
+<body>
+  <main>
+    <section class="convector">
+      <h1 class="convector__title">Currency Exchange</h1>
+      <div class="convector__app app">
+        <div class="app__inner">
+          <input type="text" value="1" class="convector__input">
+          <img class="convector__flag-images" src="img/flags/eur.png" alt="flag">
+          <select class="convector__selected-input"></select>
+        </div>
+        <div class="icon">
+          <img src="/img/exchange.png" alt="change currencies">
+        </div>
+        <div class="app__inner">
+          <input type="text" class="convector__out">
+          <img class="convector__flag-images" src="img/flags/rub.png" alt="flag">
+          <select class="convector__selected-out"></select>
+        </div>
+      </div>
+    </section>
+  </main>
+  <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+  <script src="script.js"></script>
+</body>
+
+</html>

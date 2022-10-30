@@ -1,0 +1,77 @@
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: '';
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* MY IDs */
+
+/* MY CLASSes */
+.convector {
+  padding: 1em;
+}
+.convector__title {
+  font-size: 2em;
+  margin-bottom: 0.5em;
+}
+.convector__app {
+  display: flex;
+  align-items: center;
+}
+.convector__flag-images {
+  border: 1px solid grey;
+}
+.app__inner {
+  display: flex;
+  border: 1px solid grey;
+}
+.app__inner input {
+  padding: 0.5em;
+}
+.icon {
+  width: 2em;
+  cursor: pointer;
+  margin: 0 0.3em;
+}
+.icon:hover {
+  filter: brightness(75%);
+}
