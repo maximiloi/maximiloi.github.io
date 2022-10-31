@@ -32,24 +32,33 @@ const insertCurrencies = (rates) => {
   }
 };
 
+// Установка флага
+const loadFlag = (element) => {
+  let imgTag = element.previousElementSibling;
+  imgTag.src = `img/flags/${element.value.toLowerCase()}.png`;
+};
+
+// Ввод только цифр и Добавление пробелов в водимые суммы
+const addingSpacesNumber = (number) => {
+  return number
+    .replace(/[^0-9.]/g, '')
+    .replace(/(\..*?)\..*/g, '$1')
+    .replace(/^0[^.]/, '0')
+    .replace(/\B(?=(\d{3})+(?!\d))/g, ' ');
+};
+
 // Вывод курса
 const renderExchange = () => {
   const exchangeOut = document.querySelector('.convector__out');
 
-  let amountValue = amountInput.value;
+  let amountValue = amountInput.value.split(' ').join('');
 
   let fromSelectRate = fromSelect.options[fromSelect.selectedIndex].getAttribute('data-rate');
   let toSelectRate = toSelect.options[toSelect.selectedIndex].getAttribute('data-rate');
 
   let crossCourse = toSelectRate / fromSelectRate;
 
-  exchangeOut.value = `${(amountValue * crossCourse).toFixed(2)}`;
-};
-
-// Установка флага
-const loadFlag = (element) => {
-  let imgTag = element.previousElementSibling;
-  imgTag.src = `img/flags/${element.value.toLowerCase()}.png`;
+  exchangeOut.value = `${addingSpacesNumber((amountValue * crossCourse).toFixed(2))}`;
 };
 
 window.addEventListener('load', () => {
@@ -57,6 +66,7 @@ window.addEventListener('load', () => {
 });
 
 amountInput.oninput = () => {
+  amountInput.value = addingSpacesNumber(amountInput.value);
   renderExchange();
 };
 
