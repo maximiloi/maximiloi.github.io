@@ -58,7 +58,8 @@ table {
   align-items: center;
 }
 .convector__flag-images {
-  border: 1px solid grey;
+  border-left: 1px solid grey;
+  border-right: 1px solid grey;
 }
 .app__inner {
   display: flex;
