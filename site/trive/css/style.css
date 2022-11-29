@@ -536,7 +536,7 @@ h6 {
   right: 0;
   z-index: 1000;
 }
-.about-us__nav--prev, .about-us__nav--next {
+.about-us__nav-prev, .about-us__nav-next {
   width: 5em;
   display: flex;
   justify-content: center;
@@ -548,10 +548,10 @@ h6 {
   border-radius: 50%;
   transition: opacity 0.3s ease 0s;
 }
-.about-us__nav--prev:hover, .about-us__nav--next:hover {
+.about-us__nav-prev:hover, .about-us__nav-next:hover {
   opacity: 1;
 }
-.about-us__nav--prev {
+.about-us__nav-prev {
   transform: rotate(180deg);
 }
 .about-us__text {
@@ -563,7 +563,7 @@ h6 {
 .about-us__button {
   padding: 13.5px 33px;
 }
-.about-us__button--wrapper {
+.about-us__button-wrapper {
   margin-top: 3.5625em;
 }
 
@@ -837,7 +837,7 @@ h6 {
   padding: 18px 43px;
 }
 
-.social__list {
+.social {
   margin-top: 1.875em;
   display: flex;
 }
