@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Alexandria&display=swap');
 * {
   margin: 0;
   padding: 0;
@@ -21,6 +22,7 @@ section {
   display: block;
 }
 body {
+  font-family: 'Alexandria', sans-serif;
   line-height: 1;
 }
 ol,
@@ -61,6 +63,14 @@ table {
   border-left: 1px solid grey;
   border-right: 1px solid grey;
 }
+.convector__link {
+  color: darkgrey;
+  font-size: 0.6em;
+  transition: all 0.3s ease 0s;
+}
+.convector__link:hover {
+  color: black;
+}
 .app__inner {
   display: flex;
   border: 1px solid grey;
@@ -75,4 +85,20 @@ table {
 }
 .icon:hover {
   filter: brightness(75%);
+}
+select,
+option {
+  border: none;
+  outline: none;
+  padding: 0.5em;
+  margin: 0;
+  border-radius: 0;
+}
+select {
+  position: relative;
+}
+option {
+  position: absolute;
+  bottom: 0;
+  right: 0;
 }

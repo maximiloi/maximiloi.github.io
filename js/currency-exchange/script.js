@@ -1,32 +1,40 @@
-const API_URL = 'https://cdn.cur.su/api/cbr.json';
-
 const amountInput = document.querySelector('.convector__input');
 const selectInput = document.querySelectorAll('.convector__app select');
 const fromSelect = document.querySelector('.convector__selected-input');
 const toSelect = document.querySelector('.convector__selected-out');
 const exchangeIcon = document.querySelector('.icon');
+const mainCurrency = { RUB: 1 };
 
 // Получение курсов по API
 const getCurrencies = async () => {
-  const response = await axios.get(API_URL);
-  const data = response.data;
-  const rates = data.rates;
+  const data = await fetch('https://www.cbr-xml-daily.ru/latest.js')
+    .then((response) => response.json())
+    .then((result) => result)
+    .catch((error) => console.log('error:', error));
 
-  insertCurrencies(rates);
+  createObject(data);
+};
+
+// Добавления значения рубля в объект
+const createObject = (data) => {
+  let rates = data.rates;
+  let newData = { ...mainCurrency, ...rates };
+
+  insertCurrencies(newData);
   renderExchange();
 };
 
 // Формирование Selectов из валют в ответе с сервера
-const insertCurrencies = (rates) => {
+const insertCurrencies = (newData) => {
   for (let index = 0; index < selectInput.length; index++) {
-    for (const key in rates) {
+    for (const key in newData) {
       let selected;
       if (index == 0) {
-        selected = key == 'EUR' ? 'selected' : '';
-      } else if (index == 1) {
         selected = key == 'RUB' ? 'selected' : '';
+      } else if (index == 1) {
+        selected = key == 'EUR' ? 'selected' : '';
       }
-      let optionTag = `<option value="${key}" data-rate="${rates[key]}" ${selected}>${key}</option>`;
+      let optionTag = `<option value="${key}" data-rate="${newData[key]}" ${selected}>${key}</option>`;
       selectInput[index].insertAdjacentHTML('beforeend', optionTag);
     }
   }
