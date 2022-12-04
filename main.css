@@ -27,14 +27,14 @@ button {
   line-height: 0.8;
 }
 .main__last-name {
+  display: flex;
   font-size: 80vh;
   line-height: 0.8;
 }
 .main__last-name span {
-  /* transform: rotate(90deg);
-  -webkit-transform: rotate(90deg); */
-  writing-mode: vertical-rl;
+  display: inline-block;
+  transform: rotate(90deg);
+  -webkit-transform: rotate(90deg);
+  /* writing-mode: vertical-rl; */
   line-height: 0.5;
-  margin-right: -4%;
-  margin-left: 2%;
 }
