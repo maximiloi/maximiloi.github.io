@@ -1,40 +1,39 @@
 * {
-  margin: 0;
-  padding: 0;
-  outline: 0;
-  box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    outline: 0;
+    box-sizing: border-box;
 }
 
 body {
-  background: ;
-  color: ;
-  -webkit-font-smoothing: antialiased;
+    background: ;
+    color: ;
+    -webkit-font-smoothing: antialiased;
 }
 
 body,
 input,
 button {
-  font-size: ;
-  font-family: ;
+    font-size: ;
+    font-family: ;
 }
 
 button {
-  cursor: pointer;
+    cursor: pointer;
 }
 
 .main__first-name {
-  font-size: 50vh;
-  line-height: 0.8;
+    font-size: 50vh;
+    line-height: 0.8;
 }
 .main__last-name {
-  display: flex;
-  font-size: 80vh;
-  line-height: 0.8;
+    display: flex;
+    font-size: 80vh;
+    line-height: 0.8;
 }
 .main__last-name span {
-  display: inline-block;
-  transform: rotate(90deg);
-  -webkit-transform: rotate(90deg);
-  /* writing-mode: vertical-rl; */
-  line-height: 0.5;
+    display: inline-block;
+    transform: rotate(90deg);
+    -webkit-transform: rotate(90deg);
+    line-height: 0.65;
 }
