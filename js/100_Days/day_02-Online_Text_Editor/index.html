@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
+        integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer">
+    <link rel="stylesheet" href="style.css">
+    <title># 02 - Online Text Editor | iloi</title>
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="options">
+            <button class="option__button format" id="bold">
+                <i class="fa-sharp fa-solid fa-bold"></i>
+            </button>
+            <button class="option__button script" id="superscript">
+                <i class="fa-sharp fa-solid fa-superscript"></i>
+            </button>
+            <button class="option__button script" id="subscript">
+                <i class="fa-sharp fa-solid fa-subscript"></i>
+            </button>
+            <button class="option__button" id="insertOrderedList">
+                <i class="fa-sharp fa-solid fa-list-ol"></i>
+            </button>
+            <button class="option__button" id="insertUnorderedList">
+                <i class="fa-sharp fa-solid fa-list"></i>
+            </button>
+            <button class="option__button" id="redo">
+                <i class="fa-sharp fa-solid fa-rotate-left"></i>
+            </button>
+            <button class="option__button" id="undo">
+                <i class="fa-sharp fa-solid fa-rotate-right"></i>
+            </button>
+            <button class="option__button" id="createLink">
+                <i class="fa-sharp fa-solid fa-link"></i>
+            </button>
+            <button class="option__button" id="unlink">
+                <i class="fa-sharp fa-solid fa-link-slash"></i>
+            </button>
+            <button class="option__button align" id="justifyLeft">
+                <i class="fa-sharp fa-solid fa-align-left"></i>
+            </button>
+            <button class="option__button align" id="justifyCenter">
+                <i class="fa-sharp fa-solid fa-align-center"></i>
+            </button>
+            <button class="option__button align" id="justifyRight">
+                <i class="fa-sharp fa-solid fa-align-right"></i>
+            </button>
+            <button class="option__button align" id="justifyFull">
+                <i class="fa-sharp fa-solid fa-align-justify"></i>
+            </button>
+            <button class="option__button spacing" id="indent">
+                <i class="fa-sharp fa-solid fa-indent"></i>
+            </button>
+            <button class="option__button spacing" id="outdent">
+                <i class="fa-sharp fa-solid fa-outdent"></i>
+            </button>
+            <select id="formatBlock" class="option__select option__adv">
+                <option value="H1">H1</option>
+                <option value="H2">H2</option>
+                <option value="H3">H3</option>
+                <option value="H4">H4</option>
+                <option value="H5">H5</option>
+                <option value="H6">H6</option>
+            </select>
+            <select id="fontName" class="option__select option__adv"> </select>
+            <select id="fontSize" class="option__select option__adv"> </select>
+            <div class="input">
+                <input type="color" id="foreColor" class="input__color option__adv">
+                <label for="foreColor">Font Color</label>
+            </div>
+            <div class="input">
+                <input type="color" id="backColor" class="input__color option__adv">
+                <label for="backColor">Highlight Color</label>
+            </div>
+        </div>
+
+        <div id="text-input" contenteditable="true"></div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
