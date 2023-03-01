@@ -1,6 +1,9 @@
 # maximiloi.github.io
 
+##JS
+
 - [currency-exchange](https://maximiloi.github.io/js/currency-exchange/)
 - [password-generate-app](https://maximiloi.github.io/js/password-generate-app/)
 - [tetris](https://maximiloi.github.io/js/tetris/)
 - [weather-app](https://maximiloi.github.io/js/weather-app/)
+
