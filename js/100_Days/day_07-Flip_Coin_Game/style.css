@@ -1,0 +1,99 @@
+@import url(https://fonts.googleapis.com/css?family=Poppins:regular,700&display=swap);
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: linear-gradient(
+        to right top,
+        #cf58c2,
+        #b668c5,
+        #a073c3,
+        #8e7abb,
+        #827faf
+    );
+    background-color: #ffe6ff;
+    color: #676485;
+}
+
+.game {
+    width: 400px;
+    background-color: #fff;
+    border-radius: 5px;
+    padding: 30px 50px;
+    box-shadow: 15px 30px 35px rgba(0, 0, 0, 0.2);
+    -webkit-perspective: 400px;
+    perspective: 400px;
+}
+.game__stats {
+    text-align: right;
+    line-height: 25px;
+}
+.coin {
+    width: 200px;
+    height: 200px;
+    margin: 50px auto;
+    -webkit-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+}
+.coin img {
+    width: 200px;
+}
+.coin__heads,
+.coin__tails {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+}
+.coin__tails {
+    transform: rotateX(180deg);
+}
+.button {
+    display: flex;
+    justify-content: space-between;
+}
+.button__flip,
+.button__reset {
+    width: 120px;
+    padding: 10px 0;
+    border: 2px solid #827faf;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.button__flip {
+    background-color: #827faf;
+    color: #fff;
+}
+.button__flip:disabled {
+    background-color: #ad84a6;
+    color: #444;
+    border-color: #ad84a6;
+}
+
+@keyframes spin-tails {
+    0% {
+        transform: rotateX(0);
+    }
+    100% {
+        transform: rotateX(1980deg);
+    }
+}
+
+@keyframes spin-heads {
+    0% {
+        transform: rotateX(0);
+    }
+    100% {
+        transform: rotateX(2160deg);
+    }
+}
