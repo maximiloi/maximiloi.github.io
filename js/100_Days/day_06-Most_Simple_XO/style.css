@@ -1,0 +1,105 @@
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'JetBrains Mono', monospace;
+    background: #f2f3cc;
+    color: #005b4b;
+    text-align: center;
+}
+
+h1 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.game {
+    margin: 5% auto;
+    border-radius: 5px;
+}
+
+.box {
+    display: inline-block;
+    border: 1px solid #005b4b;
+    text-align: center;
+    width: 100px;
+    height: 100px;
+    padding: 0;
+}
+
+.game__span {
+    position: absolute;
+    font-size: 75px;
+    font-family: sans-serif;
+    text-align: center;
+    height: 75px;
+    width: 75px;
+    margin: 5px;
+    margin-left: -37px;
+}
+.top {
+    border-top: none;
+}
+
+.left {
+    border-left: none;
+}
+
+.right {
+    border-right: none;
+}
+
+.bottom {
+    border-bottom: none;
+}
+
+.game__alert {
+    height: 75px;
+    width: 125px;
+    display: inline-block;
+    background: #f2f3cc;
+    position: relative;
+    z-index: 2;
+    border-radius: 20px;
+    box-shadow: 0 0 75px 2px #868a54;
+    animation: larger 0.5s;
+    animation-fill-mode: forwards;
+    box-sizing: content-box;
+    padding: 30px;
+    bottom: 50px;
+    top: 0;
+}
+
+button {
+    border: none;
+    outline: none;
+    padding: 2px 12px;
+    border-radius: 5px;
+    color: #005b4b;
+    background: #868a54;
+}
+
+.game__buttons:focus {
+    border-radius: 5px;
+}
+
+.active {
+    background: #868a54;
+}
+
+@keyframes larger {
+    from {
+        height: 75px;
+        width: 125px;
+    }
+
+    to {
+        height: 100px;
+        width: 250px;
+    }
+}
