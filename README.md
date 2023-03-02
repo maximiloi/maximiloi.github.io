@@ -1,13 +1,13 @@
 # maximiloi.github.io
 
-## JS
+## JS projects
 
 -   [currency-exchange](https://maximiloi.github.io/js/currency-exchange/)
 -   [password-generate-app](https://maximiloi.github.io/js/password-generate-app/)
 -   [tetris](https://maximiloi.github.io/js/tetris/)
--   [weather-app](https://maximiloi.github.io/js/weather-app/)
+-   [weather-app(only Chrome browser)](https://maximiloi.github.io/js/weather-app/)
 
-## 100_days_JS_width_ASMRProg
+## 100_days_JS_with_ASMRProg
 
 -   [#01-Pixel_Art_Generator](https://maximiloi.github.io/js/100_Days/day_01-Pixel_Art_Generator/)
 -   [#02-Online_Text_Editor](https://maximiloi.github.io/js/100_Days/day_02-Online_Text_Editor/)
