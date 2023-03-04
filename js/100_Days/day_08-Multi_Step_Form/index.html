@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title># 08 - Multi Step Form | iloi</title>
+</head>
+
+<body>
+
+    <div class="form">
+
+        <div class="form__steps steps">
+            <div class="steps__progress"></div>
+            <div class="steps__col"><small>Step 1</small></div>
+            <div class="steps__col"><small>Step 2</small></div>
+            <div class="steps__col"><small>Step 3</small></div>
+        </div>
+
+        <form class="form__wrapper" id="form1">
+            <h3 class="form__title">Create Account</h3>
+            <input type="text" placeholder="E-mail" class="form__input" autocomplete="off" required>
+            <input type="password" placeholder="Password" class="form__input" autocomplete="off" required>
+            <input type="password" placeholder="Confirm Password" class="form__input" autocomplete="off" required>
+
+            <div class="form__buttons">
+                <button class="button button__next" type="button" id="next1">Next</button>
+            </div>
+        </form>
+
+        <form class="form__wrapper" id="form2">
+            <h3 class="form__title">Social Links</h3>
+            <input type="text" placeholder="Instagram" class="form__input" autocomplete="off">
+            <input type="text" placeholder="Github" class="form__input" autocomplete="off">
+            <input type="text" placeholder="Twitter" class="form__input" autocomplete="off">
+
+            <div class="form__buttons">
+                <button class="button button__prev" type="button" id="back1">Back</button>
+                <button class="button button__next" type="button" id="next2">Next</button>
+            </div>
+        </form>
+
+        <form class="form__wrapper" id="form3">
+            <h3 class="form__title">Personal Info</h3>
+            <input type="text" placeholder="First Name" class="form__input" autocomplete="off" required>
+            <input type="text" placeholder="Last Name" class="form__input" autocomplete="off" required>
+            <input type="text" placeholder="Phone Number" class="form__input" autocomplete="off" required>
+
+            <div class="form__buttons">
+                <button class="button button__prev" type="button" id="back2">Back</button>
+                <button class="button button__submit" type="button" id="submit">Submit</button>
+            </div>
+        </form>
+
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
