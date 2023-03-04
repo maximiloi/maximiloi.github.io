@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Sharp:opsz,wght,FILL,GRAD@48,400,0,0">
+    <link rel="stylesheet" href="style.css">
+    <title># 10 - Weather App Step | iloi</title>
+</head>
+
+<body>
+    <div class="weather">
+        <div class="weather__search">
+            <a class="weather__coord" target="_blank">
+                <span class="weather__span material-symbols-sharp">location_searching</span>
+            </a>
+            <img src="">
+            <input class="weather__input" type="text" placeholder="Enter your location">
+            <button class="weather__button"><span class="material-symbols-sharp">search</span></button>
+        </div>
+
+        <div class="weather__not-found">
+            <img src="img/404.png" alt="Location not found">
+            <p class="weather__text">Oops! Invalid location :'/</p>
+        </div>
+
+        <div class="weather__box">
+            <img src="" alt="">
+            <p class="weather__temperature"></p>
+            <p class="weather__description"></p>
+
+            <div class="weather__details">
+                <div class="weather__humidity">
+                    <span class="material-symbols-sharp">water</span>
+                    <div class="weather__inner">
+                        <span class="weather__text-span  weather__text-span--humidity"></span>
+                        <p class="weather__text">Humidity</p>
+                    </div>
+                </div>
+                <div class="weather__wind">
+                    <span class="material-symbols-sharp">air</span>
+                    <div class="weather__inner">
+                        <span class="weather__text-span  weather__text-span--wind"></span>
+                        <p class="weather__text">Wind Speed</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

@@ -16,3 +16,6 @@
 -   [#05-Device_Battery_Detector(only Chrome browser)](https://maximiloi.github.io/js/100_Days/day_05-Device_Battery_Detector/)
 -   [#06-Most_Simple_XO](https://maximiloi.github.io/js/100_Days/day_06-Most_Simple_XO/)
 -   [#07-Flip_Coin_Game](https://maximiloi.github.io/js/100_Days/day_07-Flip_Coin_Game/)
+-   [#08-Multi_Step_Form](https://maximiloi.github.io/js/100_Days/day_08-Multi_Step_Form/)
+-   [#09](https://maximiloi.github.io/js/100_Days/day_09/)
+-   [#10-Weather_App](https://maximiloi.github.io/js/100_Days/day_10-Weather_App/)

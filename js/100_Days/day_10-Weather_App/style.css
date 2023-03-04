@@ -1,0 +1,147 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Montserrat, Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 24px;
+    color: #2d0537;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-image: linear-gradient(to left bottom, #2d0537, #313973, #046da9, #00a3d2, #12daeb);
+}
+
+::placeholder {
+    font-family: Montserrat;
+    font-size: 20px;
+    color: #5d3366;
+    text-transform: capitalize;
+}
+
+.weather {
+    max-width: 450px;
+    background-color: #fff;
+    padding: 20px 30px;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    transition: all 0.6s ease 0s;
+}
+
+.weather__span {
+    opacity: 0.5;
+}
+
+.weather__search {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.weather__search img {
+    display: none;
+    margin-left: 5px;
+    margin-right: 10px;
+}
+
+.weather__input {
+    margin-left: 32px;
+    width: 65%;
+    font-size: 24px;
+    text-transform: uppercase;
+    color: #2d0537;
+    border: 0;
+    outline: none;
+}
+
+.weather__button {
+    cursor: pointer;
+    width: 50px;
+    height: 50px;
+    border: 0;
+    border-radius: 50%;
+    outline: none;
+    color: #2d0537;
+    background-color: #e8f1ff;
+}
+
+.weather__button span {
+    font-size: 30px;
+    transition: all 0.4s ease 0s;
+}
+
+.weather__button:hover {
+    color: #e8f1ff;
+    background-color: #2d0537;
+}
+
+.weather__not-found {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 30px;
+    scale: 0;
+    opacity: 0;
+    display: none;
+}
+
+.weather__not-found img,
+.weather__box img {
+    width: 60%;
+}
+
+.weather__not-found .weather__text {
+    margin-top: 20px;
+    font-size: 22px;
+}
+
+.weather__box,
+.weather__details {
+    scale: 0;
+    opacity: 0;
+    display: none;
+    text-align: center;
+}
+
+.weather__temperature {
+    font-size: 4rem;
+    font-weight: 700;
+    margin-top: 30px;
+}
+
+.weather__details {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 30px;
+}
+
+.weather__humidity,
+.weather__wind {
+    display: flex;
+    width: 50%;
+}
+.weather__inner {
+    text-align: left;
+}
+
+.weather__text-span {
+    margin: 0 10px 0 5px;
+}
+
+.fade-in {
+    animation: 0.5s fadeIn forwards;
+    animation-delay: 0.5s;
+}
+
+@keyframes fadeIn {
+    to {
+        scale: 1;
+        opacity: 1;
+    }
+}
