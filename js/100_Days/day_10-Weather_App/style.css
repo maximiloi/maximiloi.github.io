@@ -126,6 +126,7 @@ body {
     display: flex;
     width: 50%;
 }
+
 .weather__inner {
     text-align: left;
 }

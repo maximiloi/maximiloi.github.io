@@ -1,0 +1,142 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Montserrat, Verdana, Geneva, Tahoma, sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    color: #FFEFCA;
+    background-image: linear-gradient(to top, #f3d15a, #cb8d4d, #8f5541, #492b2b, #000000);
+}
+
+.movie {
+    width: 80vw;
+    max-width: 40rem;
+    padding: 3rem 1.8rem;
+    background-color: #1B3D2F;
+    border-radius: 15px;
+    box-shadow: 20px 30px 46px rgba(0, 0, 0, 0.3);
+}
+
+.search__wrapper {
+    display: grid;
+    grid-template-columns: 9fr 3fr;
+    gap: 1.2rem;
+}
+
+.search__input, .search__button {
+    font-size: 0.9em;
+    outline: none;
+    border-radius: 0.3rem;
+    border: none;
+}
+
+.search__input {
+    background-color: transparent;
+    border: 1px solid #50A875;
+    padding: 0.7em;
+    color: #FFEFCA;
+}
+
+.search__input:focus {
+    border-color: #FFEFCA;
+}
+
+.search__button {
+    background-color: #AE9C67;
+    cursor: pointer;
+}
+
+.movie__card {
+    padding-top: 3rem;
+}
+
+.movie__info {
+    display: grid;
+    grid-template-columns: 4fr 8fr;
+    gap: 1.2rem;
+    padding-bottom: calc(3rem - 10px);
+}
+
+.movie__poster {
+    width: 100%;
+}
+
+.movie__inner {
+}
+
+.movie__title {
+    text-align: center;
+    letter-spacing: 0.06rem;
+}
+
+.movie__rating {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 16px;
+}
+
+.movie__rating-star {
+    width: 20px;
+}
+
+.movie__rating-number {
+    margin-left: 10px;
+    font-size: 20px;
+    letter-spacing: 0.06rem;
+}
+
+.movie__details {
+    margin-top: 16px;
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    color: #C6B794;
+}
+
+.movie__genre {
+    margin-top: 16px;
+    display: flex;
+    justify-content: space-around;
+}
+
+.movie__genre p {
+    font-size: 0.7em;
+    padding: 0.4em 1.6em;
+    border: 1px solid #C6B794;
+    border-radius: 3px;
+}
+
+.movie__card h3 {
+    margin: 10px 0;
+}
+
+.movie__card p {
+    color: #C6B794;
+}
+
+@media screen and (max-width: 600px) {
+    .movie {
+        font-size: 14px;
+    }
+
+    .movie__info {
+        grid-template-columns: 1fr;
+    }
+
+    .movie__poster {
+        margin: auto;
+        width: auto;
+        max-height: 20em;
+    }
+    
+}

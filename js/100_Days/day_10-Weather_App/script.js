@@ -16,8 +16,8 @@ const getWeather = () => {
     }
 
     fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&appid=${API_KEY}`)
-        .then((response) => response.json())
-        .then((data) => {
+        .then(response => response.json())
+        .then(data => {
             if (data.cod === '404') {
                 // weatherContainer.style.height = '428px';
                 weatherBox.style.display = 'none';
