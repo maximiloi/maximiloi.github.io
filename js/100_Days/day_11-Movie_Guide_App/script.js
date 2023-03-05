@@ -5,7 +5,7 @@ const movieCardOut = document.querySelector('.movie__card');
 function getMovie() {
     let movieName = searchInput.value;
 
-    let url = `http://www.omdbapi.com/?t=${movieName}&apikey=${API_KEY}`;
+    let url = `https://www.omdbapi.com/?t=${movieName}&apikey=${API_KEY}`;
 
     if (movieName.length <= 0) {
         movieCardOut.innerHTML = `<h3 class="movie__message">Please enter a movie name</h3>`;
