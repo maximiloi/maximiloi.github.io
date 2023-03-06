@@ -14,9 +14,8 @@ function getMovie() {
         fetch(url)
             .then(resp => resp.json())
             .then(data => {
-                console.log('data: ', data);
+                // console.log('data: ', data);
                 if (data.Response === 'True') {
-                    console.log('data.Response: ', data.Response);
                     movieCardOut.innerHTML = `<div class="movie__info">
                     <img class="movie__poster" src="${data.Poster}" alt="${data.Title}">
                     <div class="movie__inner">
