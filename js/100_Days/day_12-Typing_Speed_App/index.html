@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title># 12 - Typing Speed App | iloi</title>
+</head>
+
+<body>
+    <div class="app">
+        <div class="app__statistics statistics">
+            <p class="statistics__timer">Time: <span>0s</span></p>
+            <p class="statistics__mistakes">Mistakes: <span>0</span></p>
+        </div>
+
+        <div class="app_quote quote"></div>
+
+        <textarea class="app_input" rows="3" placeholder="Type here when test stats..."></textarea>
+
+        <button class="app__start button">Start Test</button>
+        <button class="app__stop button">Stop Test</button>
+
+        <div class="app__result result">
+            <h3 class="result__title">Result</h3>
+            <div class="result_inner">
+                <p class="result__accuracy">Accuracy: <span>0</span></p>
+                <p class="result__speed">Speed: <span>0</span></p>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
