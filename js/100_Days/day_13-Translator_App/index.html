@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Sharp:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200">
+    <link rel="stylesheet" href="style.css">
+    <title># 13 - Translator App | iloi</title>
+</head>
+
+<body>
+    <div class="app  translator">
+        <div class="translator__wrapper">
+            <div class="translator__inner">
+                <textarea class="translator__input" spellcheck="false" placeholder="enter text..."></textarea>
+                <textarea class="translator__output" spellcheck="false" placeholder="translation"></textarea>
+            </div>
+            <div class="translator__controls  controls">
+                <div class="controls__inner  controls__inner--input">
+                    <span class="material-symbols-sharp" data-control="input">volume_up</span>
+                    <span class="material-symbols-sharp  content_copy" data-control="input">content_copy</span>
+                    <select></select>
+                </div>
+                <span class="controls__exchange material-symbols-sharp">sync_alt</span>
+                <div class="controls__inner  controls__inner--output">
+                    <select></select>
+                    <span class="material-symbols-sharp" data-control="output">volume_up</span>
+                    <span class="material-symbols-sharp  content_copy" data-control="output">content_copy</span>
+                </div>
+            </div>
+        </div>
+        <button class="translator__button">translation text</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
