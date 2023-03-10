@@ -35,6 +35,11 @@ generateButton.addEventListener('click', () => {
 
 copyButton.addEventListener('click', () => {
     let nameCommit = commitOut.value;
+
+    if (nameCommit === '') {
+        return;
+    }
+
     navigator.clipboard.writeText(nameCommit);
     copyButton.innerText = 'check';
     copyButton.style.color = '#33918c';
