@@ -20,22 +20,36 @@ const getTime = () => {
     return time;
 };
 
-generateButton.addEventListener('click', () => {
+const generateTempName = () => {
     let preffixCommit = selectInput.value;
     let nameCommit = nameinput.value;
 
-    if (nameCommit) {
-        let tempCommit = `${preffixCommit} ${nameCommit.toLowerCase()} (${getTime()})`;
+    return (tempCommit = `${preffixCommit} ${nameCommit.toLowerCase()} (${getTime()})`);
+};
 
-        if (tempCommit.length > 50) {
-            manyError.innerText = `delete ${tempCommit.length - 50} characters`;
-            manyError.classList.remove('hidden');
-        } else {
-            commitOut.value = `git commit -m "${tempCommit}"`;
-            manyError.classList.add('hidden');
-            nameinput.value = '';
-            nameinput.style.setProperty('--c', '#2d0537');
-        }
+const outInfo = () => {
+    let tempCommit = generateTempName();
+
+    if (tempCommit.length <= 50) {
+        manyError.classList.remove('hidden');
+        manyError.classList.remove('red');
+        manyError.innerText = `add ${50 - tempCommit.length} characters`;
+    } else {
+        manyError.classList.remove('hidden');
+        manyError.classList.add('red');
+        manyError.innerText = `delete ${tempCommit.length - 50} characters`;
+    }
+};
+
+generateButton.addEventListener('click', () => {
+    let nameCommit = nameinput.value;
+
+    if (nameCommit) {
+        let tempCommit = generateTempName();
+        commitOut.value = `git commit -m "${tempCommit}"`;
+        manyError.classList.add('hidden');
+        nameinput.value = '';
+        nameinput.style.setProperty('--c', '#2d0537');
     } else {
         nameinput.style.setProperty('--c', 'red');
     }
@@ -55,4 +69,16 @@ copyButton.addEventListener('click', () => {
         copyButton.innerText = 'copy_all';
         copyButton.style.color = '#5881c5';
     }, 1500);
+});
+
+nameinput.addEventListener('input', () => {
+    outInfo();
+});
+
+selectInput.addEventListener('change', () => {
+    let nameCommit = nameinput.value;
+
+    if (nameCommit) {
+        outInfo();
+    }
 });

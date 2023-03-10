@@ -48,9 +48,13 @@ select {
 .app__error {
     font-size: 0.6em;
     font-weight: 700;
-    color: #f01616;
+    color: #10a81b;
     opacity: 1;
     transition: opacity 0.4s ease 0s;
+}
+
+.app__error.red {
+    color: #f01616;
 }
 
 .app__error.hidden {
