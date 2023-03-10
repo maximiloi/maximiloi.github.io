@@ -5,6 +5,8 @@ const copyButton = document.querySelector('.app__copy');
 const generateButton = document.querySelector('.app__button');
 const manyError = document.querySelector('.app__error');
 
+const lengthCommitName = 50;
+
 const getTime = () => {
     const date = new Date();
     const options = {
@@ -30,14 +32,14 @@ const generateTempName = () => {
 const outInfo = () => {
     let tempCommit = generateTempName();
 
-    if (tempCommit.length <= 50) {
+    if (tempCommit.length <= lengthCommitName) {
         manyError.classList.remove('hidden');
         manyError.classList.remove('red');
-        manyError.innerText = `add ${50 - tempCommit.length} characters`;
+        manyError.innerText = `add ${lengthCommitName - tempCommit.length} characters`;
     } else {
         manyError.classList.remove('hidden');
         manyError.classList.add('red');
-        manyError.innerText = `delete ${tempCommit.length - 50} characters`;
+        manyError.innerText = `delete ${tempCommit.length - lengthCommitName} characters`;
     }
 };
 
