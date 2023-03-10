@@ -3,6 +3,7 @@ const nameinput = document.querySelector('.app__input');
 const commitOut = document.querySelector('.app__out');
 const copyButton = document.querySelector('.app__copy');
 const generateButton = document.querySelector('.app__button');
+const manyError = document.querySelector('.app__error');
 
 const getTime = () => {
     const date = new Date();
@@ -14,9 +15,9 @@ const getTime = () => {
         minute: 'numeric',
         second: 'numeric',
     };
-    const currentDate = date.toLocaleDateString('en-En', options);
+    const time = date.toLocaleDateString('en-En', options);
 
-    return currentDate;
+    return time;
 };
 
 generateButton.addEventListener('click', () => {
@@ -24,10 +25,17 @@ generateButton.addEventListener('click', () => {
     let nameCommit = nameinput.value;
 
     if (nameCommit) {
-        commitOut.value = `git commit -m "${preffixCommit} ${nameCommit.toLowerCase()} (${getTime()})"`;
+        let tempCommit = `${preffixCommit} ${nameCommit.toLowerCase()} (${getTime()})`;
 
-        nameinput.value = '';
-        nameinput.style.setProperty('--c', '#2d0537');
+        if (tempCommit.length > 50) {
+            manyError.innerText = `delete ${tempCommit.length - 50} characters`;
+            manyError.classList.remove('hidden');
+        } else {
+            commitOut.value = `git commit -m "${tempCommit}"`;
+            manyError.classList.add('hidden');
+            nameinput.value = '';
+            nameinput.style.setProperty('--c', '#2d0537');
+        }
     } else {
         nameinput.style.setProperty('--c', 'red');
     }
