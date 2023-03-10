@@ -24,7 +24,7 @@ generateButton.addEventListener('click', () => {
     let nameCommit = nameinput.value;
 
     if (nameCommit) {
-        commitOut.value = `git commit -m "${preffixCommit} ${nameCommit} (${getTime()})"`;
+        commitOut.value = `git commit -m "${preffixCommit} ${nameCommit.toLowerCase()} (${getTime()})"`;
 
         nameinput.value = '';
         nameinput.style.setProperty('--c', '#2d0537');

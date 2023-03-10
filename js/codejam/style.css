@@ -73,4 +73,5 @@ select {
     right: 10px;
     top: 8px;
     color: #5881c5;
+    cursor: pointer;
 }
