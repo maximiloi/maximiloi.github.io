@@ -1,0 +1,76 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Montserrat, Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 18px;
+    color: #2d0537;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-image: linear-gradient(to right top, #a5c9ff, #75d4ff, #2adeff, #00e6eb, #12ebc7);
+}
+
+::placeholder {
+    font-family: Montserrat;
+    text-transform: capitalize;
+    color: var(--c, #2d0537);
+}
+
+select {
+    font-family: Montserrat;
+    text-transform: capitalize;
+    font-size: 1em;
+    color: #2d0537;
+
+}
+
+.app {
+    max-width: 700px;
+    width: 100%;
+    background-color: #fff;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+    border-radius: 10px;
+    padding: 2em 3em;
+}
+
+.app_title {
+    font-size: 1.5em;
+    margin-bottom: 1em;
+}
+
+.app__inner {
+    display: flex;
+    margin-bottom: 1em;
+}
+
+.app__input,
+.app__out {
+    width: 100%;
+    font-size: 1.2em;
+    padding: 0.3em 0.6em;
+}
+
+.app__button {
+    width: 100%;
+    margin-bottom: 1em;
+    font-size: 1em;
+    padding: 0.3em 0.6em;
+}
+
+.app__box {
+    position: relative;
+}
+
+.material-symbols-sharp {
+    position: absolute;
+    right: 10px;
+    top: 8px;
+    color: #5881c5;
+}
