@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Sharp:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200">
+    <link rel="stylesheet" href="style.css">
+    <title># 18 - Budget App | iloi</title>
+</head>
+
+<body>
+    <div class="app">
+        <div class="app__wrapper  app__input-wrapper">
+            <div class="app__inner  app__inner--expenses">
+                <h3 class="app__title">Expenses</h3>
+                <p class="app__error  hidden  expenses-name-error">Value cannout empty</p>
+                <input type="text" class="app__input app__input-name-product" placeholder="Enter name of product">
+                <input type="number" class="app__input app__input-cost-product" placeholder="Enter cost of product">
+                <button class="app__button app__button-product">Check amount</button>
+            </div>
+
+            <div class="app__inner  app__inner--budget">
+                <h3 class="app__title">Budget</h3>
+                <p class="app__error hidden budget-error">Value cannout empty or negative</p>
+                <input type="number" class="app__input app__input-budget" placeholder="Enter total amount">
+                <button class="app__button app__button-budget">Set Budget</button>
+            </div>
+        </div>
+
+        <div class="app__wrapper app__output-budget">
+            <div class="app__box">
+                <p class="app__title">Total Budget</p>
+                <span class="app__amount-total-out">0</span>
+            </div>
+
+            <div class="app__box">
+                <p class="app__title">Expenses</p>
+                <span class="app__amount-expenses-out">0</span>
+            </div>
+
+            <div class="app__box">
+                <p class="app__title">Balance</p>
+                <span class="app__amount-balance-out">0</span>
+            </div>
+        </div>
+
+        <div class="app__wrapper app__expenses-list  product">
+            <h3 class="app__title">Expenses List</h3>
+            <ul class="app__expenses-list-out  product__list">
+
+            </ul>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

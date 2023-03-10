@@ -22,3 +22,4 @@
 -   [#11-Movie_Guide_App](https://maximiloi.github.io/js/100_Days/day_11-Movie_Guide_App/)
 -   [#12-Typing_Speed_App](https://maximiloi.github.io/js/100_Days/day_12-Typing_Speed_App/)
 -   [#13-Translator_App](https://maximiloi.github.io/js/100_Days/day_13-Translator_App/)
+-   [#18-Budget_App](https://maximiloi.github.io/js/100_Days/day_18-Budget_App/)(доделать)
