@@ -13,7 +13,6 @@ const getTime = () => {
         hour: 'numeric',
         minute: 'numeric',
         second: 'numeric',
-        timeZone: 'UTC',
     };
     const currentDate = date.toLocaleDateString('en-En', options);
 
@@ -25,7 +24,7 @@ generateButton.addEventListener('click', () => {
     let nameCommit = nameinput.value;
 
     if (nameCommit) {
-        commitOut.value = `"${preffixCommit} ${nameCommit} (${getTime()})"`;
+        commitOut.value = `git commit "${preffixCommit} ${nameCommit} (${getTime()})"`;
 
         nameinput.value = '';
         nameinput.style.setProperty('--c', '#2d0537');
