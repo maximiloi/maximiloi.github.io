@@ -5,7 +5,7 @@ const copyButton = document.querySelector('.app__copy');
 const generateButton = document.querySelector('.app__button');
 const manyError = document.querySelector('.app__error');
 
-const lengthCommitName = 50;
+const lengthCommitName = 70;
 
 const getTime = () => {
     const date = new Date();
