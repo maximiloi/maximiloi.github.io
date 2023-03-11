@@ -12,6 +12,7 @@ const getTime = () => {
     const options = {
         weekday: 'short',
         month: 'short',
+        year: 'numeric',
         day: 'numeric',
         hour: 'numeric',
         minute: 'numeric',
