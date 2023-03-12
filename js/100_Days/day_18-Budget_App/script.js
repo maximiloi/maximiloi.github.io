@@ -98,4 +98,6 @@ productButton.addEventListener('click', () => {
     nameProductInput.value = '';
     costProductInput.value = '';
 });
+
+// git commit -m "feat:... -`LANG=en_EN date +'(%a, %b %d, %Y %r)'`-"
 //"<massage>date +'%Y-%m-%d %H:%M:%S'"
