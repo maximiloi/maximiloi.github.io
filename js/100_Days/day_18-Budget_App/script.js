@@ -98,5 +98,5 @@ productButton.addEventListener('click', () => {
     nameProductInput.value = '';
     costProductInput.value = '';
 });
-
+//1
 //"<massage>date +'%Y-%m-%d %H:%M:%S'"
