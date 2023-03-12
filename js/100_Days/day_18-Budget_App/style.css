@@ -166,6 +166,15 @@ button {
     justify-content: space-between;
 }
 
+.product__item:not(:last-child) {
+    margin-bottom: 5px;
+}
+
 .product__item span {
     cursor: pointer;
+}
+
+.product__name,
+.product__cost {
+    width: 45%;
 }
