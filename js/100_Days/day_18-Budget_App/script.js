@@ -98,3 +98,4 @@ productButton.addEventListener('click', () => {
     nameProductInput.value = '';
     costProductInput.value = '';
 });
+//test
