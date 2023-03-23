@@ -1,5 +1,3 @@
-# maximiloi.github.io
-
 ## JS projects
 
 -   [currency-exchange](https://maximiloi.github.io/js/currency-exchange/)
@@ -22,4 +20,7 @@
 -   [#11-Movie_Guide_App](https://maximiloi.github.io/js/100_Days/day_11-Movie_Guide_App/)
 -   [#12-Typing_Speed_App](https://maximiloi.github.io/js/100_Days/day_12-Typing_Speed_App/)
 -   [#13-Translator_App](https://maximiloi.github.io/js/100_Days/day_13-Translator_App/)
+-   [#14-Crypto_Price_App](https://maximiloi.github.io/js/100_Days/day_14-Crypto_Price_App/)
 -   [#18-Budget_App](https://maximiloi.github.io/js/100_Days/day_18-Budget_App/)
+
+## website layout
