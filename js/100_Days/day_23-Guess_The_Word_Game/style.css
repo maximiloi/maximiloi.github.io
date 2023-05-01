@@ -1,0 +1,96 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+
+    background-image: linear-gradient(to left top, #24a9f4, #00c1fe, #00d5e3, #00e4a4, #12eb4a);
+}
+
+.app {
+    max-width: 400px;
+    width: 100%;
+    background-color: #fff;
+    margin: 10px;
+    padding: 15px 30px;
+    border-radius: 10px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+}
+
+.app__title {
+    text-align: center;
+    border-bottom: 2px solid grey;
+    margin-bottom: 15px;
+    padding: 20px 25px;
+}
+
+.app__wrapper {}
+
+.app__char {
+    z-index: -999;
+    position: absolute;
+    pointer-events: none;
+    opacity: 0;
+}
+
+.app__word {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.app__input {
+    height: 41px;
+    width: 40px;
+    margin: 4px;
+    color: #0d47a1;
+    border: 1px solid #b5b5b5;
+    background: none;
+    text-align: center;
+    border-radius: 10px;
+    text-transform: uppercase;
+    pointer-events: none;
+    font-size: 22px;
+    font-weight: 500;
+}
+
+.app__info p {
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+.app__guess {}
+
+.app__wrong {}
+
+.app__hint {}
+
+.app__buttons {}
+
+.app__reset,
+.app__show-hint {
+    width: 48%;
+    border: none;
+    cursor: pointer;
+    color: #fff;
+    outline: none;
+    padding: 10px 0;
+    font-size: 17px;
+    background-color: #1565c0;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+}
+
+.app__reset:hover,
+.app__show-hint:hover {
+    background-color: #1e88e5;
+}
