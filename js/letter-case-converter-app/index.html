@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Letter Case Converter | iloi</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css" />
+  <script src="script.js" defer></script>
+</head>
+
+<body>
+  <div class="app">
+    <div class="app__wrapper">
+      <h1 class="app__title">Letter case converter</h1>
+      <div class="app__box">
+        <textarea cols="30" rows="10" class="app__textarea app__input"
+          placeholder="insert your text / вставьте свой текст"></textarea>
+        <textarea cols="30" rows="10" class="app__textarea app__output"
+          placeholder="pick up the redacted text / заберите отредактированый текст"></textarea>
+      </div>
+      <div class="app__buttons">
+        <button class="app__button button__upper">
+          UPPER CASE (CAPITAL LETTERS) / ВЕРХНИЙ РЕГИСТР (ПРОПИСНЫЕ БУКВЫ)
+        </button>
+        <button class="app__button button__lower">
+          lower case (lowercase) / нижний регистр (строчные буквы)
+        </button>
+        <button class="app__button button__sentence">
+          Sentence format / Формат предложений
+        </button>
+        <button class="app__button button__capitalize">
+          Capitalize Each Word / Каждое Слово С Заглавной Буквы
+        </button>
+      </div>
+    </div>
+  </div>
+  <div class="toast">Text copied to clipboard / Текст скопирован в буфер обмена</div>
+</body>
+
+</html>

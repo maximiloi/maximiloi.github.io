@@ -1,0 +1,87 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'JetBrains Mono', monospace;
+  margin: 0;
+  background-color: #12b1eb;
+  background-image: linear-gradient(
+    to left bottom,
+    #6900f5,
+    #005cff,
+    #0080ff,
+    #009bff,
+    #12b1eb
+  );
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+button {
+  background: #fbca1f;
+  font-family: inherit;
+  padding: 0.6em 1.3em;
+  font-weight: 900;
+  font-size: 18px;
+  border: 3px solid black;
+  border-radius: 0.4em;
+  box-shadow: 0.1em 0.1em;
+}
+
+button:hover {
+  transform: translate(-0.05em, -0.05em);
+  box-shadow: 0.15em 0.15em;
+}
+
+button:active {
+  transform: translate(0.05em, 0.05em);
+  box-shadow: 0.05em 0.05em;
+}
+
+.app__title {
+  color: #fbca1f;
+  text-align: center;
+}
+
+.app__box {
+  margin-bottom: 30px;
+
+  display: flex;
+  justify-content: center;
+}
+
+.app__textarea {
+  width: 100%;
+
+  border-radius: 4px;
+
+  outline: none;
+}
+
+.app__textarea:not(:last-child) {
+  margin-right: 20px;
+}
+
+.app__buttons {
+  display: flex;
+  flex-direction: column;
+}
+
+.app__button:not(:last-child) {
+  margin-bottom: 10px;
+}
+
+.toast {
+  display: none;
+  position: fixed;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 10px 20px;
+  background-color: #333;
+  color: #fff;
+  border-radius: 5px;
+}
