@@ -10,9 +10,18 @@ function showToast(text) {
   }, 1500);
 }
 
+function checkInput(value) {
+  if (!value) {
+    showToast('Type in text / Введите текст');
+    return;
+  }
+}
+
 const documentActions = (e) => {
   const textInput = appInput.value;
   const targetElem = e.target;
+
+  checkInput(textInput);
 
   if (targetElem.closest('.button__upper')) {
     appOutput.innerText = textInput.toUpperCase();
