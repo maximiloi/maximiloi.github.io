@@ -1,0 +1,117 @@
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 18px;
+    color: #314a4c;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-image: linear-gradient(to bottom, #051937, #113360, #1a508b, #1c6fba, #1290eb);
+}
+
+.todo {
+    min-width: 500px;
+    background-color: #fefefe;
+    padding: 2rem 0;
+    border-radius: 10px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+}
+
+.todo__wrapper {
+    position: relative;
+    height: 3rem;
+    padding: 0 1.5rem;
+}
+
+.todo__input {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 18px;
+    
+    height: 100%;
+    width: 100%;
+    padding: 0 1rem 0 3rem;
+    
+    border: 1px solid #314a4c;
+    outline: none;
+    border-radius: 5px;
+}
+
+.todo__input:focus, .todo__input.active {
+    border: 2px solid #113360;
+}
+
+.todo__input:focus::placeholder{
+    color: #849a9a;
+}
+
+.todo__icon {
+    position: absolute;
+    top: 50%;
+    transform: translate( 1rem, -50%);
+    font-size: 24px;
+}
+
+.todo__controls {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 1rem 1.5rem;
+    border-bottom: 1px solid #314a4c;
+}
+
+.todo__filters {
+    display: flex;
+    list-style: none;
+}
+
+.todo__filter {
+    cursor: pointer;
+}
+
+.todo__filter.active {
+    color: #11a2ac;
+}
+
+.todo__filter:not(:last-child) {
+    margin-right: 0.5rem;
+}
+
+.todo__button {
+    cursor: pointer;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 18px;
+
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 4px;
+
+    pointer-events: auto;
+}
+
+.todo__button.active {
+    opacity: .9;
+    pointer-events: none;
+}
+
+.todo__button:active {
+    transform: scale(.95);
+}
+
+.todo__inner {
+    list-style: none;
+    padding: 1rem 1.5rem;
+}
+
+.todo__inner.overflow {
+    overflow-y: auto;
+    max-height: 300px;
+}

@@ -17,6 +17,7 @@ const documentActions = (e) => {
 
   if (!inputText) {
     showToast('Type in text / Введите текст');
+    return;
   }
 
   if (targetElem.closest('.button__upper')) {
@@ -41,7 +42,7 @@ const documentActions = (e) => {
   }
 
   if (targetElem.closest('.app__output')) {
-    if (!textInput) {
+    if (!inputText) {
       showToast('Type in text / Введите текст');
     } else if (!appOutput.value) {
       showToast('Click the button / Нажмите кнопку');
