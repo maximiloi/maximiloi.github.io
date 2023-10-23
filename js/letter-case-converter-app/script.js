@@ -39,9 +39,9 @@ const documentActions = (e) => {
 
   if (targetElem.closest('.app__output')) {
     if (!textInput) {
-      showToast('Введите текст');
+      showToast('Type in text / Введите текст');
     } else if (!appOutput.value) {
-      showToast('Нажмите кнопку');
+      showToast('Click the button / Нажмите кнопку');
     } else {
       appOutput.select();
       document.execCommand('copy');
