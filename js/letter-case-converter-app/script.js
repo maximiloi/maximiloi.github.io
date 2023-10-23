@@ -2,8 +2,9 @@ const appInput = document.querySelector('.app__input');
 const appOutput = document.querySelector('.app__output');
 const toast = document.querySelector('.toast');
 
-function showToast() {
+function showToast(text) {
   toast.style.display = 'block';
+  toast.innerText = text;
   setTimeout(function () {
     toast.style.display = 'none';
   }, 1500);
@@ -28,7 +29,8 @@ const documentActions = (e) => {
   }
 
   if (targetElem.closest('.button__capitalize')) {
-    const wordsArr = textInput.split(' ');
+    const newString = textInput.toLowerCase();
+    const wordsArr = newString.split(' ');
     const newArray = wordsArr.map(
       (word) => word.charAt(0).toUpperCase() + word.slice(1)
     );
@@ -36,9 +38,15 @@ const documentActions = (e) => {
   }
 
   if (targetElem.closest('.app__output')) {
-    appOutput.select();
-    document.execCommand('copy');
-    showToast();
+    if (!textInput) {
+      showToast('Введите текст');
+    } else if (!appOutput.value) {
+      showToast('Нажмите кнопку');
+    } else {
+      appOutput.select();
+      document.execCommand('copy');
+      showToast('Text copied to clipboard / Текст скопирован в буфер обмена');
+    }
   }
 };
 
