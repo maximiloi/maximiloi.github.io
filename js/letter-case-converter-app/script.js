@@ -10,36 +10,30 @@ function showToast(text) {
   }, 1500);
 }
 
-function checkInput(value) {
-  if (!value) {
-    showToast('Type in text / Введите текст');
-    return;
-  }
-}
-
 const documentActions = (e) => {
-  const textInput = appInput.value;
+  const inputText = appInput.value;
+  const stringLowerCase = inputText.toLowerCase();
   const targetElem = e.target;
 
-  checkInput(textInput);
+  if (!inputText) {
+    showToast('Type in text / Введите текст');
+  }
 
   if (targetElem.closest('.button__upper')) {
-    appOutput.innerText = textInput.toUpperCase();
+    appOutput.innerText = inputText.toUpperCase();
   }
 
   if (targetElem.closest('.button__lower')) {
-    appOutput.innerText = textInput.toLowerCase();
+    appOutput.innerText = stringLowerCase;
   }
 
   if (targetElem.closest('.button__sentence')) {
-    const newString = textInput.toLowerCase();
     appOutput.innerText =
-      newString.charAt(0).toUpperCase() + newString.slice(1);
+      stringLowerCase.charAt(0).toUpperCase() + stringLowerCase.slice(1);
   }
 
   if (targetElem.closest('.button__capitalize')) {
-    const newString = textInput.toLowerCase();
-    const wordsArr = newString.split(' ');
+    const wordsArr = stringLowerCase.split(' ');
     const newArray = wordsArr.map(
       (word) => word.charAt(0).toUpperCase() + word.slice(1)
     );
