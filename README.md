@@ -1,8 +1,8 @@
 ## JS projects
 
+- [letter-case-converter-app](https://maximiloi.github.io/js/letter-case-converter-app/)
 - [currency-exchange](https://maximiloi.github.io/js/currency-exchange/)
 - [password-generate-app](https://maximiloi.github.io/js/password-generate-app/)
-- [letter-case-converter-app](https://maximiloi.github.io/js/letter-case-converter-app/)
 - [tetris](https://maximiloi.github.io/js/tetris/)
 - [weather-app(only Chrome browser)](https://maximiloi.github.io/js/weather-app/)
 
