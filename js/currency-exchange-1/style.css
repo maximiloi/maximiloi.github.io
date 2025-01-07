@@ -1,0 +1,123 @@
+@import url('https://fonts.googleapis.com/css2?family=Alexandria&display=swap');
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+body {
+  font-family: 'Alexandria', sans-serif;
+  line-height: 1;
+}
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: '';
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+.convector {
+  padding: 1em;
+}
+.convector__title {
+  font-size: 2em;
+  margin-bottom: 0.5em;
+}
+.convector__app {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.convector__flag-images {
+  border: 1px solid grey;
+}
+.convector__link {
+  color: darkgrey;
+  font-size: 0.6em;
+  transition: all 0.3s ease 0s;
+}
+.convector__link:hover {
+  color: black;
+}
+.app__inner {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: 1px solid grey;
+  max-width: 340px;
+  width: 100%;
+  margin-bottom: 1em;
+  padding: 0.4em 0.8em;
+}
+.app__inner span {
+  position: relative;
+  width: 70px;
+  padding: 0.5em 1.5em 0.5em 0.5em;
+  cursor: pointer;
+}
+.app__inner span::after {
+  width: 14px;
+  height: 10px;
+  background: #fff
+    url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTEiIGhlaWdodD0iNiIgdmlld0JveD0iMCAwIDExIDYiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PHBhdGggZmlsbC1ydWxlPSJldmVub2RkIiBjbGlwLXJ1bGU9ImV2ZW5vZGQiIGQ9Ik01LjQ5OTk4IDQuNzkyODdMMS4zNTM1MyAwLjY0NjQyM0wwLjY0NjQyMyAxLjM1MzUzTDUuMTQ2NDIgNS44NTM1M0M1LjM0MTY5IDYuMDQ4NzkgNS42NTgyNyA2LjA0ODc5IDUuODUzNTMgNS44NTM1M0wxMC4zNTM1IDEuMzUzNTNMOS42NDY0MiAwLjY0NjQyM0w1LjQ5OTk4IDQuNzkyODdaIiBmaWxsPSIjRkY3NDI0Ii8+PC9zdmc+Cg==')
+    no-repeat center / cover;
+  position: absolute;
+  right: 5px;
+  bottom: 50%;
+  transform: translateY(50%);
+  content: '';
+  display: block;
+  transition: 0.2s ease-in;
+}
+.app__inner span.open::after {
+  transform: translateY(50%) rotate(180deg);
+}
+.app__inner input {
+  width: 100%;
+  margin: 0.4em 0.8em;
+  padding: 0.4em 0.8em;
+  border: solid 1px #d9d9d9;
+}
+.app__inner input:active,
+.app__inner input:focus {
+  outline: none;
+}
+.icon {
+  width: 2em;
+  height: 2em;
+  cursor: pointer;
+  margin: 0 0.3em;
+}
+.icon:hover {
+  filter: brightness(75%);
+}
