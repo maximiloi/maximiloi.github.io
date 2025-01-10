@@ -38,7 +38,7 @@ const renderExchange = () => {
   )}`;
 
   outRub.value = `${addingSpacesNumber(
-    (amountValue * (requiredCurrencies.RUB / requiredCurrencies.BYN)).toFixed(2)
+    (amountValue * (100 / 3.4)).toFixed(2)
   )}`;
 };
 
